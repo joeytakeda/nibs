@@ -6,6 +6,8 @@
     exclude-result-prefixes="#all"
     xpath-default-namespace="http://www.w3.org/1999/xhtml"
     xmlns="http://tei-c.org/ns/1.0"
+    xmlns:tei='http://tei-c.org/ns/1.0'
+    xmlns:jt="https://joeytakeda.github.io/ns/1.0"
     version="3.0">
     <xd:doc scope="stylesheet">
         <xd:desc>
@@ -20,10 +22,6 @@
     <xsl:output method="xml"/>
     
     <xsl:template match="/">
-        <xsl:apply-templates select="//body"/>
-    </xsl:template>
-    
-    <xsl:template match="body">
         <TEI xml:id="HisRoyalNibs">
             <teiHeader>
                 <fileDesc>
@@ -37,19 +35,73 @@
                 </fileDesc>
             </teiHeader>
             <text>
-                <body>
-                    <xsl:apply-templates/>
-                </body>
+                <xsl:call-template name="structure">
+                    <xsl:with-param name="content">
+                        <xsl:apply-templates select="//body"/>
+                    </xsl:with-param>
+                </xsl:call-template>
             </text>
-   
         </TEI>
+    </xsl:template>
+    
+ 
+    
+    <xsl:template name="structure">
+        <xsl:param name="content" as="node()+"/>
+        <xsl:apply-templates select="$content" mode="structure"/>
+      
+    </xsl:template>
+    
+    <xsl:mode name="structure" on-no-match="shallow-copy"/>
+    
+   
+    <xsl:template match="tei:body" mode="structure">
+        <xsl:copy>
+            <xsl:for-each-group select="node()" group-starting-with="tei:head">
+                <xsl:choose>
+                    <xsl:when test="some $c in current-group() satisfies $c/self::tei:head">
+                        <div type="chapter" n="{position()-1}">
+                            <xsl:apply-templates mode="#current" select="current-group()"/>
+                        </div>
+                    </xsl:when>
+                    <xsl:otherwise>
+                        <xsl:apply-templates select="current-group()" mode="#current"/>
+                    </xsl:otherwise>
+                </xsl:choose>
+                
+            </xsl:for-each-group>
+        </xsl:copy>
+        
+    </xsl:template>
+    
+    <xsl:template match="tei:p" mode="structure">
+        <xsl:copy>
+            <xsl:for-each-group select="node()" group-starting-with="tei:anchor">
+                <xsl:choose>
+                    <xsl:when test="some $c in current-group() satisfies $c/self::tei:anchor[@type='qStart']">
+                        <q><xsl:apply-templates select="current-group()" mode="#current"/></q>
+                    </xsl:when>
+                    <xsl:otherwise>
+                        <xsl:apply-templates select="current-group()" mode="#current"/>
+                    </xsl:otherwise>
+                </xsl:choose>
+            </xsl:for-each-group>
+        </xsl:copy>
+    </xsl:template>
+    
+    <xsl:template match="tei:anchor" mode="structure"/>
+    
+    <xsl:template match="body">
+        <body>
+            <xsl:apply-templates/>
+        </body>
     </xsl:template>
     
     <!--Each page is a <div> but we want to flatten that in the TEI output,
         so create a self-closing <pb/> milestone and process its contents-->
     <xsl:template match="div[@class='ocr_page']">
         <!--We started at page 7-->
-        <pb n="{count(preceding::div[@type='ocr_page']) + 7}"/>
+        <pb n="{count(preceding::div[@class='ocr_page']) + 7}"/>
         <xsl:apply-templates/>
     </xsl:template>
     
@@ -73,28 +125,90 @@
         
         I also need to discuss with MC what sort of project this could be: it could, on the one hand, be an edition built outside of the WEA constraints (since there are many for that archive) but that I then contribute a "santized" version that elimainates much of the dense encoding. It would also need to then receive the texts from the WEA; perhaps part of the project could then be a crosswalk from this structure to the WEA's?-->
         
-        -->
+    
     <xsl:template match="p[@class='ocr_par']">
         <xsl:if test="string-join(descendant::text(),'') => normalize-space() => string-length() gt 0">
-            <xsl:variable name="thisPara" select="."/>
-            <xsl:variable name="thisBlock" select="parent::div"/>
-            <xsl:variable name="thisParaIsFirstPara" select="empty($thisBlock/preceding-sibling::div)" as="xs:boolean"/>
-            <xsl:variable name="thisParaIsLastPara" select="empty($thisBlock/following-sibling::div)" as="xs:boolean"/>
-            <xsl:element name="{if ($thisParaIsFirstPara or $thisParaIsLastPara) then 'fw' else 'p'}">
-                <xsl:if test="$thisParaIsFirstPara or $thisParaIsLastPara">
-                    <xsl:attribute name="type" select="if ($thisParaIsFirstPara) then 'header' else 'pageNum'"/>               
+            <xsl:variable name="paraParams" select="jt:makeParaMap(.)"/>
+            <xsl:variable name="pgHeading" select="$paraParams('isPageHeading')" as="xs:boolean"/>
+            <xsl:variable name="pgNum" select="$paraParams('isPageNum')" as="xs:boolean"/>
+            <xsl:variable name="chapHead" select="$paraParams('isChapterHeading')" as="xs:boolean"/>
+            <xsl:element name="{
+                if ($pgHeading or $pgNum)
+                then 'fw'
+                else if ($chapHead) then 'head'
+                else 'p'}">
+                <xsl:if test="$pgHeading or $pgNum">
+                    <xsl:attribute name="type" select="if ($pgHeading) then 'pageHeading' else 'pageNum'"/>
                 </xsl:if>
+                <xsl:apply-templates>
+                    <xsl:with-param name="paraParams" select="$paraParams" tunnel="yes"/>
+                </xsl:apply-templates>
                 
-                <xsl:apply-templates/>
             </xsl:element>
+            
         </xsl:if>
-     
     </xsl:template>
+    
+    <xsl:function name="jt:makeParaMap" as="map(xs:string, xs:boolean)">
+        <xsl:param name="p" as="element(p)"/>
+        <xsl:map>
+            <xsl:map-entry key="'isPageHeading'" select="jt:isPageHeading($p)"/>
+            <xsl:map-entry key="'isPageNum'" select="jt:isPageNum($p)"/>
+            <xsl:map-entry key="'isChapterHeading'" select="jt:isChapterHeading($p)"/>
+        </xsl:map>
+    </xsl:function>
+    
+    <xsl:function name="jt:isPageHeading" as="xs:boolean">
+        <xsl:param name="p" as="element(p)"/>
+        <xsl:variable name="isFirst" select="empty($p/parent::div/preceding-sibling::div)" as="xs:boolean"/>
+        <xsl:variable name="span" select="$p//span[@class='ocrx_word']" as="element(span)+"/>
+        <xsl:variable name="hasHeadingText" select="count($span) = 3 and (matches($span[1],'His','i') and matches($span[2],'Royal','i') and matches($span[3],'Nibs','i'))" as="xs:boolean"/>
+        <xsl:value-of select="$isFirst and $hasHeadingText"/>
+    </xsl:function>
+    
+    <xsl:function name="jt:isPageNum" as="xs:boolean">
+        <xsl:param name="p" as="element(p)"/>
+        <xsl:variable name="isLast" select="empty($p/parent::div/following-sibling::div)" as="xs:boolean"/>
+        <xsl:variable name="words" select="$p//span[@class='ocrx_word']" as="element(span)+"/>
+        <xsl:variable name="pageNumbery" select="count($words) = (2 to 3) and (some $w in $words satisfies matches($w,'^\d+') and (some $b in $words satisfies ($b,'\[|\]')))" as="xs:boolean"/>
+        <xsl:value-of select="$isLast and $pageNumbery"/>
+    </xsl:function>
+    
+    <xsl:function name="jt:isChapterHeading" as="xs:boolean">
+        <xsl:param name="p" as="element(p)"/>
+        <xsl:variable name="words" select="$p//span[@class='ocrx_word']" as="element(span)+"/>
+        <xsl:variable name="chapterHeadingLike" select="matches(string-join($words,''),'^\s*CHAPTER')" as="xs:boolean"/>
+        <xsl:value-of select="$chapterHeadingLike"/>
+    </xsl:function>
+    
     <xsl:template match="p/text()"/>
     
     <xsl:template match="span[@class='ocr_line']">
-        <xsl:if test="exists(preceding-sibling::span[@class='ocr_line'])"><xsl:text>&#x9;&#x9;&#x9;&#xA;</xsl:text><lb/></xsl:if><xsl:value-of select="string-join(span/text(),' ')"/>
+        <xsl:if test="exists(preceding-sibling::span[@class='ocr_line'])"><xsl:text>&#x9;&#x9;&#x9;&#xA;</xsl:text><lb/></xsl:if>
+        <xsl:for-each select="span">
+            <xsl:apply-templates select="."/><xsl:if test="not(position() = last())"><xsl:text> </xsl:text></xsl:if>
+        </xsl:for-each>
     </xsl:template>
+        
+        
+    <xsl:template match="span[@class='ocrx_word']/text()[matches(.,'”|“')]">
+         <xsl:analyze-string select="." regex="“">
+             <xsl:matching-substring>
+                 <anchor type="qStart"/>
+             </xsl:matching-substring>
+             <xsl:non-matching-substring>
+                 <xsl:analyze-string select="." regex="”">
+                     <xsl:matching-substring>
+                         <anchor type="qEnd"/>
+                     </xsl:matching-substring>
+                     <xsl:non-matching-substring>
+                         <xsl:value-of select="."/>
+                     </xsl:non-matching-substring>
+                 </xsl:analyze-string>
+             </xsl:non-matching-substring>
+         </xsl:analyze-string>
+     </xsl:template>
+        
     
     
     

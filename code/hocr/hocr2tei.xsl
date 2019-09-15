@@ -19,7 +19,7 @@
     </xd:doc>
     
     <!--We're outputting the XHTML-ish to TEI-->
-    <xsl:output method="xml"/>
+    <xsl:output method="xml" indent="true" suppress-indentation="p q"/>
     
     <xsl:template match="/">
         <TEI xml:id="HisRoyalNibs">
@@ -57,7 +57,7 @@
    
     <xsl:template match="tei:body" mode="structure">
         <xsl:copy>
-            <xsl:for-each-group select="node()" group-starting-with="tei:head">
+            <xsl:for-each-group select="*" group-starting-with="tei:head">
                 <xsl:choose>
                     <xsl:when test="some $c in current-group() satisfies $c/self::tei:head">
                         <div type="chapter" n="{position()-1}">
@@ -87,6 +87,12 @@
                 </xsl:choose>
             </xsl:for-each-group>
         </xsl:copy>
+        <xsl:text>&#xA;&#xA;</xsl:text>
+    </xsl:template>
+    
+    <xsl:template match="tei:fw[@type='pageHeading']" mode="structure">
+        <xsl:copy-of select="."/>
+        <xsl:text>&#xA;&#xA;</xsl:text>
     </xsl:template>
     
     <xsl:template match="tei:anchor" mode="structure"/>

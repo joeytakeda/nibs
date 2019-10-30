@@ -5,6 +5,14 @@
       <fileDesc>
          <titleStmt>
             <title>His Royal Nibs</title>
+            <respStmt>
+               <resp>Author</resp>
+               <name>Winnifred Reeve</name>
+            </respStmt>
+            <respStmt>
+               <resp>Editor</resp>
+               <name>Joey Takeda</name>
+            </respStmt>
          </titleStmt>
          <publicationStmt>
             <p>TBA</p>
@@ -12,24 +20,29 @@
          <sourceDesc><p>TBA</p></sourceDesc>
       </fileDesc>
       <encodingDesc>
-         <tagsDecl>
-            <rendition xml:id="smallcaps">font-variant: small-caps;</rendition>
-            <rendition xml:id="headings" selector="div > head">text-transform: all-caps;</rendition>
-         </tagsDecl>
+         <p>Encoding desc goes here...</p>
       </encodingDesc>
+      <revisionDesc>
+         <change status="proofed" xml:id="proofed">Chapter proofed</change>
+         <change status="draft" xml:id="draft">Chapter in draft</change>
+      </revisionDesc>
    </teiHeader>
    <text>
-      <body>
+      <!--NOTES:
+         
+         Think about tagging stutters? They do so in the Guidelines (as just a nonce example in the Alignment chapter
+         but it might be useful here: <seg type="stutter"></seg>.-->
+      <body change="#draft">
          <pb n="7"/>
          <head>HIS ROYAL NIBS</head>
-         <div type="chapter" n="1">
+         <div type="chapter" n="1" change="#proofed">
             <head>Chapter I</head>
             <p><hi rendition="#smallcaps">Along</hi> the <placeName>Banff National Highway</placeName>, auto<pc force="weak">-</pc>			
 <lb/>mobiles sped by in a cloud of dust, heat, noise			
 <lb/>and odour. They stopped not to offer a lift to			
 <lb/>the wayfarer along the road, for they were			
 <lb/>intent upon making the evergrowing grade to			
-<lb/><placeName>Banff</placeName> on <soCalled>high</soCalled>.</p>
+<lb/><placeName>Banff</placeName> on <soCalled>high</soCalled>.<note type="editorial">Make some note here "Some Motorists" etc.</note></p>
             
             <p>This year <term>tramps</term> were common on the road,			
 <lb/>war veterans, for the most part, <soCalled>legging it</soCalled>			
@@ -139,7 +152,7 @@
             <p>From the direction of the corrals swept			
 <lb/>reinforcements, in the shape of <soCalled>Hootmon</soCalled>,			
 <lb/>a Scot so nicknamed by the outfit, because of			
-<lb/>his favourite explosive utterance<note><!--Do I need a note here?--></note>, and <persName>Sandy</persName>,			
+<lb/>his favourite explosive utterance,<note><!--Do I need a note here?--></note> and <persName>Sandy</persName>,			
 <lb/>son of the <placeName>O Bar O</placeName>, red-haired, freckled<pc force="weak">-</pc>			
 <lb/>faced and indelibly marked by the sun above,			
 <lb/>who rode his <term>Indian bronc</term> with the grace and			
@@ -283,9 +296,9 @@
 <lb/>help on your ranch? Because if you do, I’d			
 <lb/>like to apply for the position. If this is a			
 <lb/>cattle ranch, I'll say that I know a bit about			
-<lb/>horses. R-r-r-ridden s-some in my time, and			
-<lb/>I t-took care of a c-car-load of cattle c-coming
-            <p>[16]</p>
+<lb/>horses. <seg type="stutter">R-r-r-r</seg>idden <seg type="stutter">s-s</seg>ome in my time, and			
+<lb/>I <seg type="stutter">t-t</seg>ook care of a <seg type="stutter">c-c</seg>ar-load of cattle <seg type="stutter">c-c</seg>oming
+            <fw type="pageNum">[16]</fw>
             <pb n="17"/>
             <fw type="pageHeading">His Royal Nibs</fw>
 <lb/>up from the east. W-w-worked my way out			
@@ -349,13 +362,13 @@
             <pb n="20"/>
          </div>
          
-         <!--SEPTEMBER 14: Chapter 1 first pass done-->
+
          <div type="chapter" n="2">
             <head>Chapter II</head>
             <p><persName rendition="#smallcaps">Sandy</persName> made three somersaults of glee on			
 <lb/>the turf, and at his last turn-over, his head			
 <lb/>came into contact with something hard. He			
-<lb/>rubbed said head, and at the same time ob<pc force="weak">-</pc>			
+<lb/>rubbed said head, and at the same time ob<pc force="weak">-</pc>	
 <lb/>served that which had pained him. It was a			
 <lb/>large, old-fashioned gold locket, studded with			
 <lb/>rubies and diamonds.</p>
@@ -364,7 +377,7 @@
 <lb/>bridle of his horse, and was on him. He went			
 <lb/>up the hill on a run, and began calling out<pc force="weak">-</pc>			
 <lb/>side the house, while still on horse.</p>
-            <p><q>Hildal I say, Hilda! Come on out!			
+            <p><q>Hilda! I say, Hilda! Come on out!			
 <lb/>Looka here what I found!</q></p>
             <p>A girl, skin bronzed by sun and wind, with			
 <lb/>chocolate-coloured eyes and hair and a cer<pc force="weak">-</pc>			
@@ -399,7 +412,7 @@
 <lb/>of gigantic hills, etched against a sky of sheer<pc force="weak">-</pc>			
 <lb/>est blue, upon which the everlasting sun			
 <lb/>glowed.</p>
-            <p>[21 ]</p>
+            <fw type="pageNum">[21 ]</fw>
             <pb n="22"/>
             <fw type="pageHeading">His Royal Nibs</fw>
             <p><q>By George!</q> exclaimed the new <q>hand</q>			
@@ -427,7 +440,7 @@
 <lb/>human family. Hands on hips, they <q>took his</q></p>
             <fw type="pageNum">[ 22]</fw>
             <pb n="23"/>
-            <p>Hs Royal Nibs</p>
+            <fw type="pageHeading">His Royal Nibs</fw>
             <p>number and pronounced him internally a</p>
             <p>freak of nature.</p>
             <p>To the door of the cook-car, rolled the im<pc force="weak">-</pc>			
@@ -451,9 +464,9 @@
 <lb/>whitest of teeth. But it was her voice, with its			
 <lb/>shrill edge of impudent young mirth that sent			
 <lb/>the colour to the pinched cheeks of the new</p>
-            <fw type="pageNum">[ 23 ]</fw>
+            <fw type="pageNum">[23]</fw>
             <pb n="24"/>
-            <p>Alis Royal Nibs</p>
+            <fw type="pageHeading">His Royal Nibs</fw>
             <p>hand of O Bar O. There was in it, despite its			
 <lb/>mockery, a haughty accent of contempt.</p>
             <p><q>Who’s his royal nibs, Bully Bill?</q></p>
@@ -504,7 +517,7 @@
 <lb/>his tongue. His heels came together with a			
 <lb/>curiously smart and military click, and his			
 <lb/>blue eyes looked squarely into the impudent</p>
-            <p>[25 ]</p>
+            <fw type="pageNum">[25 ]</fw>
             <pb n="26"/>
             <fw type="pageHeading">His Royal Nibs</fw>
             <p>brown ones of the girl, laughing in his face.			
@@ -628,7 +641,7 @@
             <p>He'd <q>think it over</q>. He’d <q>see about it			
 <lb/>some day, maybe</q>, and he <q>‘wasn’t so damned			
 <lb/>cussed sure that it would benefit the world to</q></p>
-            <p>[ 30]</p>
+            <fw type="pageNum">[ 30]</fw>
             <pb n="31"/>
             <fw type="pageHeading">His Royal Nibs</fw>
             <p>produce cheap wheat at the present time.			
@@ -682,7 +695,7 @@
 <lb/>den all of the children of the neighbouring			
 <lb/>ranch country, and into which his own			
 <lb/>progeny were unceremoniously dumped.</p>
-            <p>[ 32]</p>
+            <fw type="pageNum">[ 32]</fw>
             <pb n="33"/>
             <fw type="pageHeading">His Royal Nibs</fw>
             <p>However, when the curriculum of this Insti<pc force="weak">-</pc>			
@@ -763,9 +776,9 @@
             <p>If, however, the young McPhersons had			
 <lb/>missed school, they had learned much of which			
 <lb/>the average child of to-day is more or less igno-</p>
-            <p>035]</p>
+            <fw type="pageNum">035]</fw>
             <pb n="36"/>
-            <p>Ais Royal Nibs</p>
+            <fw type="pageHeading">His Royal Nibs</fw>
             <p>rant. They knew all of the theories concerned			
 <lb/>in the formation of this earth of ours, and the			
 <lb/>living things upon it. They were intimately			
@@ -790,7 +803,7 @@
 <lb/>bees, were known by their scientific names. A			
 <lb/>rainbow, a sunrise, sunset, the morning mist,			
 <lb/>fog, the night sun of Alberta, the Japanese cur-</p>
-            <p>[ 36]</p>
+            <fw type="pageNum">[ 36]</fw>
             <pb n="37"/>
             <fw type="pageHeading">His Royal Nibs</fw>
             <p>rent that brought the Chinook winds over the			
@@ -819,7 +832,7 @@
 <lb/>hood years, and paused like timid, curious</p>
             <fw type="pageNum">[37]</fw>
             <pb n="38"/>
-            <p>Flis Royal Nibs</p>
+            <fw type="pageHeading">His Royal Nibs</fw>
             <p>young creatures of the wild upon the perilous			
 <lb/>edge of maturity.</p>
             <p>Hilda was not without a comprehension of			
@@ -920,7 +933,7 @@
 <lb/>always with a sense of unholy elation and			
 <lb/>ecstatic freedom.</p>
             <p>P. D.’s good or bad humour upon his return</p>
-            <p>[41 ]</p>
+            <fw type="pageNum">[41 ]</fw>
             <pb n="42"/>
             <fw type="pageHeading">His Royal Nibs</fw>
             <p>to the ranch depended entirely upon the suc<pc force="weak">-</pc>			
@@ -1162,7 +1175,7 @@
 <lb/>his mouth,</p>
             <p>As a matter of fact, like most Englishmen			
 <lb/>of his class, Cheerio was an excellent rider,</p>
-            <p>[ 50]</p>
+            <fw type="pageNum">[ 50]</fw>
             <pb n="51"/>
             <fw type="pageHeading">His Royal Nibs</fw>
             <p>though his riding had not been of the sort			
@@ -1245,7 +1258,7 @@
             <p>His love of nature, his enthusiasm over sun-</p>
             <fw type="pageNum">[53]</fw>
             <pb n="54"/>
-            <p>Hiis Royal Nibs</p>
+            <fw type="pageHeading">His Royal Nibs</fw>
             <p>sets and sunrises, the poetry he insisted upon			
 <lb/>inditing to the moon and the star-spotted skies,			
 <lb/>to the jagged outline of those misty mountains,			
@@ -1376,7 +1389,7 @@
 <lb/>between them, according to Hilda. Sandy			
 <lb/>evidently preferred his society to that of his			
 <lb/>own and only sister. Thus, bitter Hilda.</p>
-            <p>[ 58]</p>
+            <fw type="pageNum">[ 58]</fw>
             <pb n="59"/>
             <fw type="pageHeading">His Royal Nibs</fw>
             <p>Sandy upbraided, reproached and sneered at,			
@@ -1405,7 +1418,7 @@
 <lb/>Each evening, therefore, Hilda was on</p>
             <fw type="pageNum">[59]</fw>
             <pb n="60"/>
-            <p>Ais Royal Nibs</p>
+            <fw type="pageHeading">His Royal Nibs</fw>
             <p>hand, and she arose before dawn of a Sunday			
 <lb/>morning—a time when all hands on the ranch			
 <lb/>were accustomed to sleep in late—to ride out			
@@ -1564,7 +1577,7 @@
 <lb/>Here was the ideal studio. Not in the tunnel,			
 <lb/>on whose ledge he could very well keep his			
 <lb/>work, but in that round natural chamber near</p>
-            <p>[ 65 ]</p>
+            <fw type="pageNum">[ 65 ]</fw>
             <pb n="66"/>
             <fw type="pageHeading">His Royal Nibs</fw>
             <p>the opening, when the north light was hus<pc force="weak">-</pc>			
@@ -1590,8 +1603,8 @@
 <lb/>cowboys; Hilda, loping slowly along the			
 <lb/>trail, with her head dropped in a day dream,			
 <lb/>that brought somehow a singularly wistful			
-<lb/>and touching expression of longing to the			
-<lb/>[ 66 ]</p>
+<lb/>and touching expression of longing to the</p>
+            <fw type="pageNum">[66]</fw>
             <pb n="67"/>
             <fw type="pageHeading">His Royal Nibs</fw>
             <p>lovely young face; Hilda with hand on hip,			
@@ -1659,7 +1672,7 @@
 <lb/>scrutinizing the grade for any possible root</p>
             <fw type="pageNum">[ 69 ]</fw>
             <pb n="70"/>
-            <p>Ais Royal Nibs</p>
+            <fw type="pageHeading">His Royal Nibs</fw>
             <p>or tree stump upon which he might grasp in			
 <lb/>an emergency. <q>Say</q>, his head jerked side<pc force="weak">-</pc>			
 <lb/>ways toward Cheerio, who had dismounted			
@@ -1765,7 +1778,7 @@
 <lb/>electrical silence? As the troubled questions			
 <lb/>came tumbling over one another through the			
 <lb/>girl’s mind, Cheerio suddenly turned in his</p>
-            <p>C73]</p>
+            <fw type="pageNum">C73]</fw>
             <pb n="74"/>
             <fw type="pageHeading">His Royal Nibs</fw>
             <p>saddle and directly sought her gaze. A won<pc force="weak">-</pc>			
@@ -1819,7 +1832,7 @@
             <p>He glanced at her, as if slightly surprised.</p>
             <p><q>Why no, that hardly describes it, you			
 <lb/>know</q>.</p>
-            <p>(75]</p>
+            <fw type="pageNum">(75]</fw>
             <pb n="76"/>
             <fw type="pageHeading">His Royal Nibs</fw>
             <p>He was thoughtful a moment, and then			
@@ -1984,7 +1997,7 @@
 <lb/>humid with undropped tears as over the still</p>
             <fw type="pageNum">[81]</fw>
             <pb n="82"/>
-            <p>Hits Royal Nibs</p>
+            <fw type="pageHeading">His Royal Nibs</fw>
             <p>evening air her brother’s shrill young voice			
 <lb/>floated:</p>
             <p><q>Hilda not coming! Gee! we’re in luck/			
@@ -2082,7 +2095,7 @@
             <p>That was a disturbing question, and more<pc force="weak">-</pc>			
 <lb/>over a revealing one. It plainly disclosed to			
 <lb/>the upset Cheerio that there were others</p>
-            <p>[ 86]</p>
+            <fw type="pageNum">[ 86]</fw>
             <pb n="87"/>
             <fw type="pageHeading">His Royal Nibs</fw>
             <p><q>stuck on</q> Hilda. In fact, Sandy left no			
@@ -2138,7 +2151,7 @@
 <lb/>were stretched out on the various cots that</p>
             <fw type="pageNum">[ 88 ]</fw>
             <pb n="89"/>
-            <p>Hits Royal Nibs</p>
+            <fw type="pageHeading">His Royal Nibs</fw>
             <p>lined the long bunkhouse taking their weekly			
 <lb/>siesta. Cheerio himself was accustomed to			
 <lb/>spend his Sundays in his cave studio, but in			
@@ -2352,7 +2365,7 @@
 <lb/>ural course of events, having tired of chasing			
 <lb/>the various hens from the stalls and vainly			
 <lb/>snapping at persistent fleas, he sniffed along</p>
-            <p>[967</p>
+            <fw type="pageNum">[967</fw>
             <pb n="97"/>
             <fw type="pageHeading">His Royal Nibs</fw>
             <p>the trail over which his young mistress (he re<pc force="weak">-</pc>			
@@ -2405,7 +2418,7 @@
 <lb/>presently settle into the misty gleam of the re<pc force="weak">-</pc>			
 <lb/>luctantly-ending day was beginning to tint the			
 <lb/>land, when Hilda looked forth from the hay</p>
-            <p>[ 98]</p>
+            <fw type="pageNum">[ 98]</fw>
             <pb n="99"/>
             <fw type="pageHeading">His Royal Nibs</fw>
             <p>loft window and perceived something directly			
@@ -2577,9 +2590,9 @@
 <lb/>nate or appeal to the imagination of the young			
 <lb/>McPhersons as this masterpiece of the elder			
 <lb/>Dumas. They were literally transplanted in</p>
-            <p>[ 105 ]</p>
+            <fw type="pageNum">[ 105 ]</fw>
             <pb n="106"/>
-            <p>Aits Royal Nibs</p>
+            <fw type="pageHeading">His Royal Nibs</fw>
             <p>thought into the France of the Grande Mon<pc force="weak">-</pc>			
 <lb/>arche.</p>
             <p>Hilda indeed so lost herself each night in			
@@ -2604,7 +2617,7 @@
             <p><q>Tf I'd a been D’Artagnan you bet I’d ’ve			
 <lb/>stood up for the Man in the Iron Mask. I			
 <lb/>betchu he’d ’ve made a better king than Louis</q>.</p>
-            <p>[ 106 ]</p>
+            <fw type="pageNum">[ 106 ]</fw>
             <pb n="107"/>
             <fw type="pageHeading">His Royal Nibs</fw>
             <p>Couldn’t you read just as far as where they			
@@ -2631,7 +2644,7 @@
 <lb/>could have given Sandy a hard shaking when			
 <lb/>he disclosed to Cheerio the type of literature			
 <lb/>that he and Hilda had been <q>raised on</q>.</p>
-            <p>[ 107 ]</p>
+            <fw type="pageNum">[ 107 ]</fw>
             <pb n="108"/>
             <fw type="pageHeading">His Royal Nibs</fw>
             <p>Cheerio, with intense seriousness, assured			
@@ -3014,7 +3027,7 @@
 <lb/>near, and until the job was done, O Bar O			
 <lb/>would take on the aspect of an Indian en<pc force="weak">-</pc>			
 <lb/>campment. At such times Hilda, who knew</p>
-            <p>[ 122]</p>
+            <fw type="pageNum">[ 122]</fw>
             <pb n="123"/>
             <fw type="pageHeading">His Royal Nibs</fw>
             <p>personally most of the Indians of the Stoney			
@@ -3095,7 +3108,7 @@
 <lb/>chess</q>.</p>
             <p><q>Couldn’t you get him by phone or wire,			
 <lb/>Miss Hilda? Rather important to know what</q></p>
-            <p>[125 ]</p>
+            <fw type="pageNum">[125 ]</fw>
             <pb n="126"/>
             <fw type="pageHeading">His Royal Nibs</fw>
             <p>to do with this new stuff, seein’ as how they’re			
@@ -3175,7 +3188,7 @@
 <lb/>blind before the branding iron; others is like			
 <lb/>yourself, Miss Hilda, with high spirits and			
 <lb/>you got to get ’em broke in the Squeezegate</q></p>
-            <p>[ 128 ]</p>
+            <fw type="pageNum">[ 128 ]</fw>
             <pb n="129"/>
             <fw type="pageHeading">His Royal Nibs</fw>
             <p>before you can use ’em. Pretty hard to slip			
@@ -3283,7 +3296,7 @@
 <lb/>the eye of the Englishman.</p>
             <p>Though the day of the chap-clad, large<pc force="weak">-</pc>			
 <lb/>hatted type of cowboy is said to have passed			
-<lb/>in the Western States, in Alberta he is still a			
+<lb/>in the Western States, in Alberta he is still a	<!--Alberta as an odd, or perhaps skewed, mimesis of the cowboy mythos-->
 <lb/>thriving, living reality. In this <q>last of the			
 <lb/>big lands</q>,			
 <lb/>hundreds of thousands of acres, their guar<pc force="weak">-</pc>			
@@ -3503,7 +3516,7 @@
 <lb/>cinating spectacle of that moving stream of			
 <lb/>cattle and turned towards the corral. He saw,			
 <lb/>first of all, a giant structure, a platform on</p>
-            <p>[141 ]</p>
+            <fw type="pageNum">[141 ]</fw>
             <pb n="142"/>
             <fw type="pageHeading">His Royal Nibs</fw>
             <p>which was a gallowslike contrivance. Already			
@@ -3593,7 +3606,7 @@
 <lb/>ing lightly to the top rail, she watched the			
 <lb/>operations with professional curiosity. For a			
 <lb/>moment, Cheerio suffered a pang of revolting</p>
-            <p>[145 ]</p>
+            <fw type="pageNum">[145 ]</fw>
             <pb n="146"/>
             <fw type="pageHeading">His Royal Nibs</fw>
             <p>repugnance. That one so young and so lovely			
@@ -3755,7 +3768,7 @@
             <p><q>Wearin’ her over his heart, huh!</q> chuckled			
 <lb/>Ho, one thick, dirty finger upon the locket,			
 <lb/>while his knowing glance pinned the stricken</p>
-            <p>[x51]</p>
+            <fw type="pageNum">[x51]</fw>
             <pb n="152"/>
             <fw type="pageHeading">His Royal Nibs</fw>
             <p>one of the girl. With a sob, Hilda drew back,			
@@ -3835,7 +3848,7 @@
 <lb/>had staggered, with a shout, to his feet. At the			
 <lb/>psychological moment, when his company had			
 <lb/>started forward, he had welched, stumbled</p>
-            <p>[154 ]</p>
+            <fw type="pageNum">[154 ]</fw>
             <pb n="155"/>
             <fw type="pageHeading">His Royal Nibs</fw>
             <p>back, and, with the anguished oaths of the cap<pc force="weak">-</pc>			
@@ -3917,7 +3930,7 @@
 <lb/>mit!</q> they pushed him to his feet, and with</p>
             <fw type="pageNum">[ 157]</fw>
             <pb n="158"/>
-            <p>Ais Royal Nibs</p>
+            <fw type="pageHeading">His Royal Nibs</fw>
             <p>prods of the bayonet, Cheerio went before the			
 <lb/>Germans.</p>
             <p>His hands swept his face as if by their mo<pc force="weak">-</pc>			
@@ -4039,7 +4052,7 @@
 <lb/>he was still smarting over having been ignored			
 <lb/>and snubbed for long by those top-lofty, self<pc force="weak">-</pc>			
 <lb/>satisfied, condescending lords of the chess</p>
-            <p>[ 163 ]</p>
+            <fw type="pageNum">[ 163 ]</fw>
             <pb n="164"/>
             <fw type="pageHeading">His Royal Nibs</fw>
             <p>board. For two years P. D. had banged at			
@@ -4253,7 +4266,7 @@
 <lb/>unwillingly into the ranch house he passed			
 <lb/>not alone into the place. Close upon his heels,			
 <lb/>silently and unseen by the absorbed master of</p>
-            <p>[171 ]</p>
+            <fw type="pageNum">[171 ]</fw>
             <pb n="172"/>
             <fw type="pageHeading">His Royal Nibs</fw>
             <p>the house, followed the yellow dog, Viper.			
@@ -4360,7 +4373,7 @@
 <lb/>where cattle were grazing. He would pick			
 <lb/>out from among them the ten head of milk			
 <lb/>stock, snap at their heels till they were formed</p>
-            <p>[175 ]</p>
+            <fw type="pageNum">[175 ]</fw>
             <pb n="176"/>
             <fw type="pageHeading">His Royal Nibs</fw>
             <p>into a separate bunch, and drive them down			
@@ -4468,7 +4481,7 @@
 <lb/>a long, blood-curdling, blistering string of			
 <lb/>original curses that caused even his hardened			
 <lb/>foreman to blench. That raised voite, those</p>
-            <p>[ 179]</p>
+            <fw type="pageNum">[ 179]</fw>
             <pb n="180"/>
             <fw type="pageHeading">His Royal Nibs</fw>
             <p>unmistakable words of wrath penetrated			
@@ -4495,7 +4508,7 @@
 <lb/>the sacred chess board.</p>
             <p>There was a roar from the outraged chess			
 <lb/>player, a whining protest from the boy, duck-</p>
-            <p>[ 180 ]</p>
+            <fw type="pageNum">[ 180 ]</fw>
             <pb n="181"/>
             <fw type="pageHeading">His Royal Nibs</fw>
             <p>ing out of his way, and at that critical moment,			
@@ -4923,7 +4936,7 @@
 <lb/>huhe</q></p>
             <fw type="pageNum">[ 197 ]</fw>
             <pb n="198"/>
-            <p>Aits Royal Nibs</p>
+            <fw type="pageHeading">His Royal Nibs</fw>
             <p><q>Not on your life. One of his own men			
 <lb/>done it</q>.</p>
             <p><q>G’wan! Who?</q></p>
@@ -5159,8 +5172,8 @@
 <lb/>and, extending it carelessly to Sandy, invited			
 <lb/>him to have one. Sandy, whose young lips			
 <lb/>had never touched the forbidden weed, helped</p>
-            <p>himself with ostentatious carelessness and even			
-<lb/>[ 206 ]</p>
+            <p>himself with ostentatious carelessness and even</p>
+            <fw type="pageNum">[ 206 ]</fw>
             <pb n="207"/>
             <fw type="pageHeading">His Royal Nibs</fw>
             <p>accepted the light tendered from the other’s			
@@ -5263,9 +5276,9 @@
 <lb/>of comradeship grew up between them, and			
 <lb/>each took the measure of the other and knew			
 <lb/>him for a kindred spirit.</p>
-            <p>[ 210 ]</p>
+            <fw type="pageNum">[ 210 ]</fw>
             <pb n="211"/>
-            <p>His Roya! Nibs</p>
+            <fw type="pageHeading">His Royal Nibs</fw>
             <p>In the middle of the afternoon, they counted			
 <lb/>with pride the results of the day’s work.			
 <lb/>Cheerio made a <q>rock stove</q> and built a fine			
@@ -5290,9 +5303,9 @@
 <lb/>and said:</p>
             <p><q/><q>Come on, old man. Time to get back</q>,			
 <lb/>and Sandy sat up with a start, rubbed his</p>
-            <p>{ 211 }</p>
+            <fw type="pageNum">{ 211 }</fw>
             <pb n="212"/>
-            <p>Fis Royal Nibs</p>
+            <fw type="pageHeading">His Royal Nibs</fw>
             <p>eyes, yawned, and unwillingly arose and			
 <lb/>moved toward Silver Heels, whose bridle had			
 <lb/>slipped down the slender trunk of the tree to			
@@ -5344,7 +5357,7 @@
 <lb/>the worst. Hilda had her opinion of a man			
 <lb/>who pretended to be a cowpuncher, who wore			
 <lb/>a piece of jewellery dangling from a black</p>
-            <p>[213 ]</p>
+            <fw type="pageNum">[213 ]</fw>
             <pb n="214"/>
             <fw type="pageHeading">His Royal Nibs</fw>
             <p>fob at his waist. She despised the type of man,			
@@ -5666,7 +5679,7 @@
 <lb/>bonus.</p>
             <fw type="pageNum">[ 225 ]</fw>
             <pb n="226"/>
-            <p>Ais Royal Nibs</p>
+            <fw type="pageHeading">His Royal Nibs</fw>
             <p>This year <q>Whisper</q> had learned, through			
 <lb/>the medium of Holy Smoke, that during the			
 <lb/>period when the hands of O Bar O were idling			
@@ -5744,8 +5757,8 @@
             <p>know theyll wander off somewheres where</p>
             <p>you ain’t goin’ to see them no more. Just let</p>
             <p>’em get awandering up in them hills near</p>
-            <p>Broken Nose Lake, and I betchu that'll be the			
-<lb/>[ 228 ]</p>
+            <p>Broken Nose Lake, and I betchu that'll be the</p>
+            <fw type="pageNum">[ 228 ]</fw>
             <pb n="229"/>
             <fw type="pageHeading">His Royal Nibs</fw>
             <p>last of em. Besides, I heered down in Coch<pc force="weak">-</pc>			
@@ -5826,7 +5839,7 @@
 <lb/>he’s through. IT’Il tuck in a word edgeways			
 <lb/>now.’ So J slipped over and. </q></p>
             <p><q>What did Dad saye</q></p>
-            <p>[ 231]</p>
+            <fw type="pageNum">[ 231]</fw>
             <pb n="232"/>
             <fw type="pageHeading">His Royal Nibs</fw>
             <p>Hilda was leaning forward, wide-eyed with			
@@ -5938,7 +5951,7 @@
 <lb/>whirled around, and found herself face to face</q></p>
             <fw type="pageNum">[ 235 ]</fw>
             <pb n="236"/>
-            <p>Aits Royal Nibs</p>
+            <fw type="pageHeading">His Royal Nibs</fw>
             <p>with Cheerio. Even in the moonlight, she			
 <lb/>could see that his face was set and stern as his			
 <lb/>glance passed by her and rested upon the shift<pc force="weak">-</pc>			
@@ -6139,7 +6152,7 @@
 <lb/>shelf in the natural gallery that stretched			
 <lb/>under the rock for a space of about thirty feet.			
 <lb/>It was amply lighted and completely shel-</p>
-            <p>[ 243 ]</p>
+            <fw type="pageNum">[ 243 ]</fw>
             <pb n="244"/>
             <fw type="pageHeading">His Royal Nibs</fw>
             <p>tered. As Mallison went down the line of			
@@ -6284,8 +6297,7 @@
 <lb/>his pipe, beamed upon the sleeping P. D., and			
 <lb/>with his brown head against the back of the			
 <lb/>Morris chair, Cheerio had lapsed into what</p>
-            <p>[ 249 ]			
-<lb/>j</p>
+            <fw type="pageNum">[ 249 ]</fw>
             <pb n="250"/>
             <fw type="pageHeading">His Royal Nibs</fw>
             <p>seemed to be a brown study in which Hilda			
@@ -6338,7 +6350,7 @@
 <lb/>she might escape. She had reason for believ<pc force="weak">-</pc>			
 <lb/>ing him to be unworthy—a man who put to a			
 <lb/>crucial test, had failed miserably; one who</p>
-            <p>[251 ]</p>
+            <fw type="pageNum">[251 ]</fw>
             <pb n="252"/>
             <fw type="pageHeading">His Royal Nibs</fw>
             <p>had confessed to a flagrant and criminal weak<pc force="weak">-</pc>			
@@ -6398,7 +6410,7 @@
 <lb/>ested. By the way, about P. D.2 How’d you			
 <lb/>come out?</q></p>
             <p>The city editor had picked up again one of</p>
-            <p>[ 254 ]</p>
+            <fw type="pageNum">[ 254 ]</fw>
             <pb n="255"/>
             <fw type="pageHeading">His Royal Nibs</fw>
             <p>the sketches and was examining it interestedly.			
@@ -6425,7 +6437,7 @@
 <lb/>he ejaculated:</p>
             <p><q>Hello! What's this?</q></p>
             <p>Absently turning over the sketches, the pho-.</p>
-            <p>F255]</p>
+            <fw type="pageNum">F255]</fw>
             <pb n="256"/>
             <fw type="pageHeading">His Royal Nibs</fw>
             <p>tograph of Cheerio was suddenly revealed.			
@@ -6506,7 +6518,7 @@
             <p>Mallison felt himself shrivelling under a			
 <lb/>mean pang. It was a dirty trick to have taken			
 <lb/>the sketches, though Mallison proposed to</p>
-            <p>[ 258 ]</p>
+            <fw type="pageNum">[ 258 ]</fw>
             <pb n="259"/>
             <fw type="pageHeading">His Royal Nibs</fw>
             <p>show them to certain prominent folk of Cal<pc force="weak">-</pc>			
@@ -6769,7 +6781,7 @@
 <lb/>was off her horse, had grasped the end of the</p>
             <fw type="pageNum">[ 268 ]</fw>
             <pb n="269"/>
-            <p>Hs Royal Nibs</p>
+            <fw type="pageHeading">His Royal Nibs</fw>
             <p>lariat, whipped it about the gate post, tied a			
 <lb/>tight knot, ducked under the wire of the fence,			
 <lb/>and secure in the knowledge that her pursuer			
@@ -6793,8 +6805,8 @@
 <lb/>before Hilda, Cheerio swiftly dismounted and			
 <lb/>was at her side.</p>
             <p><q>Hilda! You’ve been thrown!</q></p>
-            <p>Oh, how that voice, with its unmistakable			
-<lb/>[ 269 ]</p>
+            <p>Oh, how that voice, with its unmistakable</p>
+            <fw type="pageNum">[ 269 ]</fw>
             <pb n="270"/>
             <fw type="pageHeading">His Royal Nibs</fw>
             <p>note of deep anxiety in her behalf, made			
@@ -6823,7 +6835,7 @@
 <lb/>showed for an instant in the half light and dis-</p>
             <fw type="pageNum">[ 270 ]</fw>
             <pb n="271"/>
-            <p>Ais Royal Nibs</p>
+            <fw type="pageHeading">His Royal Nibs</fw>
             <p>appeared into the dense woods beyond.			
 <lb/>Cheerio made a motion as if to remount and			
 <lb/>follow, but Hilda clung to his sleeve.</p>
@@ -6847,7 +6859,7 @@
 <lb/>horse with one hand, and holding her arm with			
 <lb/>the other. Her own mount had gone free and			
 <lb/>would not be recovered till the morning. She</p>
-            <p>[271 ]</p>
+            <fw type="pageNum">[271 ]</fw>
             <pb n="272"/>
             <fw type="pageHeading">His Royal Nibs</fw>
             <p>would not follow his suggestion to mount his			
@@ -6874,7 +6886,7 @@
 <lb/>lips:</p>
             <p><q>M-my dear old girl!</q> he said. <q>I’m dashed			
 <lb/>jolly glad I’m alive</q>.</p>
-            <p>[ 272 ]</p>
+            <fw type="pageNum">[ 272 ]</fw>
             <pb n="273"/>
             <fw type="pageHeading">His Royal Nibs</fw>
             <p>Hilda said in a whisper:</p>
@@ -6937,7 +6949,7 @@
 <lb/>she came back vividly to mind, a little sob			
 <lb/>escaped her. She tried to fight the encroach<pc force="weak">-</pc>			
 <lb/>ing thought of this woman’s claim.</p>
-            <p>[ 275 ]</p>
+            <fw type="pageNum">[ 275 ]</fw>
             <pb n="276"/>
             <fw type="pageHeading">His Royal Nibs</fw>
             <p><q>Suppose he had been in love with her, I’ve			
@@ -6993,7 +7005,7 @@
 <lb/>to have vanished. How long he stood thus,</p>
             <fw type="pageNum">[ 277]</fw>
             <pb n="278"/>
-            <p>Hits Royal Nibs</p>
+            <fw type="pageHeading">His Royal Nibs</fw>
             <p>cannot be estimated by minutes or seconds.			
 <lb/>Presently he sat down upon the steps, and soon			
 <lb/>was lost in a blissful daze of abstraction.</p>
@@ -7045,7 +7057,7 @@
 <lb/>verses were of a high order from a critical</p>
             <fw type="pageNum">[ 279 ]</fw>
             <pb n="280"/>
-            <p>Hs Royal Nibs</p>
+            <fw type="pageHeading">His Royal Nibs</fw>
             <p>point of view. They were heartfelt—an ex<pc force="weak">-</pc>			
 <lb/>pression of what seemed surging up within			
 <lb/>him. He needed a medium through which he			
@@ -7183,7 +7195,7 @@
 <lb/>thing loathsome.</p>
             <p><q>What should I want with it?</q></p>
             <p><q>Tt</q> also was spoken as <q>that</q>.</p>
-            <p>[ 285 ]</p>
+            <fw type="pageNum">[ 285 ]</fw>
             <pb n="286"/>
             <fw type="pageHeading">His Royal Nibs</fw>
             <p>Like a tidal wave, the girl’s anger over<pc force="weak">-</pc>			
@@ -7210,7 +7222,7 @@
             <p><q>T s-say</q>,’ he persisted stupidly, <q>I only			
 <lb/>w-wanted you to have it. It’s a n-nice old			
 <lb/>thing, you know, and </q></p>
-            <p>[ 286 J</p>
+            <fw type="pageNum">[ 286 J</fw>
             <pb n="287"/>
             <fw type="pageHeading">His Royal Nibs</fw>
             <p><q>How dare you offer me a thing like that?</q>			
@@ -7329,9 +7341,9 @@
             <p><q>I said if you’d only defend your King in<pc force="weak">-</pc>			
 <lb/>stead of everlastingly attacking, don’t you see,			
 <lb/>you'd stand a better chance. I’ve noticed on</q></p>
-            <p>[291 ]</p>
+            <fw type="pageNum">[291 ]</fw>
             <pb n="292"/>
-            <p>Hits Royal Nibs</p>
+            <fw type="pageHeading">His Royal Nibs</fw>
             <p>two or three occasions that he’s left great open<pc force="weak">-</pc>			
 <lb/>ings where I’m sure you could</p>
             <p><q>Are you trying to teach your father the			
@@ -7357,7 +7369,7 @@
             <p><q>Father!</q> Hilda seldom called her father</p>
             <fw type="pageNum">[ 292 ]</fw>
             <pb n="293"/>
-            <p>Ais Royal Nibs</p>
+            <fw type="pageHeading">His Royal Nibs</fw>
             <p><q>Father</q>, but she believed herself to be in a			
 <lb/>desperate situation and desperate speech and			
 <lb/>measures were necessary. <q>Father, you have			
@@ -7410,7 +7422,7 @@
 <lb/>quickly changed the position of a Black Queen</p>
             <fw type="pageNum">[ 294 ]</fw>
             <pb n="295"/>
-            <p>HAs Royal Nibs</p>
+            <fw type="pageHeading">His Royal Nibs</fw>
             <p>and a White Pawn. His hand was scarcely off			
 <lb/>the board when Hilda McPherson slipped			
 <lb/>from between the portieres.</p>
@@ -7518,7 +7530,7 @@
 <lb/>as she passed, Hilda McPherson followed her</p>
             <fw type="pageNum">[ 298 ]</fw>
             <pb n="299"/>
-            <p>Hs Royal Nibs</p>
+            <fw type="pageHeading">His Royal Nibs</fw>
             <p>father and Cheerio. But she could go no far<pc force="weak">-</pc>			
 <lb/>ther than the verandah. There she sat			
 <lb/>crouched down on the steps, her face in her			
@@ -7657,7 +7669,7 @@
 <lb/>lariat her in the woods. She stared at him now			
 <lb/>in a sort of fascinated horror. A cunning look			
 <lb/>of surprised delight was creeping over the</p>
-            <p>[ 304 ]</p>
+            <fw type="pageNum">[ 304 ]</fw>
             <pb n="305"/>
             <fw type="pageHeading">His Royal Nibs</fw>
             <p>man’s face. Hilda put her hand behind her			
@@ -7900,7 +7912,7 @@
             <p><q>Hilda! I love youl</q></p>
             <p><q>Oh, do your Then—then—that Nanna—</q></p>
             <p><q>Nanna is seventy-four. My old nurse</q>,</p>
-            <p>[ 313 ]</p>
+            <fw type="pageNum">[ 313 ]</fw>
             <pb n="314"/>
             <fw type="pageHeading">His Royal Nibs</fw>
             <p>Hilda. When I returned from—Germany—			

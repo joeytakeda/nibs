@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project basedir="."  default="all" name="buildSite">
+  
+  <!--A fairly simple build for the site-->
+    <target name="clean">
+        <delete dir="site"/>
+        <mkdir dir="site"/>
+    </target>
+    
+    <target name="createEdition">
+        <java classpath="lib/saxon9he.jar" classname="net.sf.saxon.Transform" failonerror="true" >
+            <arg value="-xsl:${basedir}/code/site/html.xsl"/>
+            <arg value="-s:${basedir}/tei/HisRoyalNibs.xml"/>
+        </java>
+    </target>
+    
+    <target name="copySiteFiles">
+        <copy todir="site">
+            <fileset dir="code">
+                <include name="css/**"/>
+                <include name="js/**"/>
+                <include name="fonts/**"/>
+            </fileset>
+        </copy>
+    </target>
+    
+    <target name="all" depends="clean, createEdition, copySiteFiles"/>
+    
+</project>

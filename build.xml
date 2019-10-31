@@ -20,6 +20,7 @@
                 <include name="css/**"/>
                 <include name="js/**"/>
                 <include name="fonts/**"/>
+                <include name="images/**"/>
             </fileset>
         </copy>
     </target>

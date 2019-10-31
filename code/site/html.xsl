@@ -44,12 +44,21 @@
                 <head>
                     <title>His Royal Nibs: A Critical Digital Edition</title>
                     <xsl:call-template name="addHeaderElements"/>
+                    <script src="js/typewriter.js"/>
                 </head>
                 <body>
-                    <header>
-                        <h1>His Royal Nibs</h1>
-                    </header>
                     <main>
+                        <header>
+                            <div id="heading-box">
+                                <div id="heading-card">
+                                    <h1>
+                                        <span id="title">His Royal Nibs</span>
+                                        <span id="attribution">By</span>
+                                        <span id="byline">Winnifred Eaton</span>
+                                    </h1>
+                                </div>
+                            </div>
+                        </header>
                         <h2>Chapters</h2>
                         <ul id="index-toc">
                             <xsl:for-each select="//div[@type='chapter']">

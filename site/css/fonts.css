@@ -9,6 +9,14 @@
 		url("../fonts/Garamond.woff") format('woff');
 }
 
+@font-face{
+    font-family: 'Narcissus';
+    font-style: normal;
+    font-weight: 400;
+    src: local('Narcissus'),
+         url("../fonts/Narcissus.otf");
+}
+
 /* libre-baskerville-regular - latin */
 @font-face {
   font-family: 'Libre Baskerville';

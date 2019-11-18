@@ -114,7 +114,7 @@
     <xsl:template match="body" mode="toc">
         <aside id="toc">
             <ul>
-                <li><a href="/">Home</a></li>
+                <li><a href="index.html">Home</a></li>
                 <li><a href="search.html">Search</a></li>
                 <li><a href="introduction.html">Critical Introduction</a></li>
                 <li><a href="digital-text.html">Note on the Digital Text</a></li>

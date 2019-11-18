@@ -59,20 +59,23 @@
                                 </div>
                             </div>
                         </header>
-                        <h2>Chapters</h2>
-                        <ul id="index-toc">
-                            <xsl:for-each select="//div[@type='chapter']">
-                                <li>
-                                    <a href="chapter{@n}.html">
-                                        <div class="ch-num">
-                                            <span class="num"><xsl:value-of select="@n"/></span>
-                                        </div>
-                                        <div class="snippet">
-                                            <xsl:apply-templates select="p[1]" mode="snippet"/>
-                                        </div>
-                                    </a></li>
-                            </xsl:for-each>
-                        </ul>
+                        <section>
+                            <h2>Chapters</h2>
+                            <ul id="index-toc">
+                                <xsl:for-each select="//div[@type='chapter']">
+                                    <li>
+                                        <a href="chapter{@n}.html">
+                                            <div class="ch-num">
+                                                <span class="num"><xsl:value-of select="@n"/></span>
+                                            </div>
+                                            <div class="snippet">
+                                                <xsl:apply-templates select="p[1]" mode="snippet"/>
+                                            </div>
+                                        </a></li>
+                                </xsl:for-each>
+                            </ul>
+                        </section>
+                        
                     </main>
                 </body>
             </html>
@@ -317,9 +320,9 @@
     
     <xsl:template name="addHeaderElements">
         <!--META TAGS WILL GO HERE AT SOME TIME-->
-        <link rel="stylesheet" href="/css/reset.css"/>
-        <link rel="stylesheet" href="/css/fonts.css"/>
-        <link rel="stylesheet" href="/css/hrn.css"/>
+        <link rel="stylesheet" href="css/reset.css"/>
+        <link rel="stylesheet" href="css/fonts.css"/>
+        <link rel="stylesheet" href="css/hrn.css"/>
         <script src="/js/hrn.js"/>
     </xsl:template>
     

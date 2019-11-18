@@ -1,18 +1,18 @@
+os: linux
 dist: trusty
 jdk:
   - oraclejdk8
 language: java
-before-script:
+before_script:
     - pip install --user awscli
     - ant -f build.xml
     - mkdir HisRoyalNibs
-    - mv site HisRoyalNibs
+    - mv site/* HisRoyalNibs
 script:
-    - aws s3 sync HisRoyalNibs s3://joeytakeda --acl public-read --delete
-    - aws cloudfront create-invalidation --distribution-id EOIED742DZBCD --paths '/*'
+    - aws s3 sync HisRoyalNibs s3://joeytakeda --acl public-read
 notifications:
   email:
-    recepients:
+    recipients:
       - joey.takeda@gmail.com
     on_success: change 
     on_failure: always

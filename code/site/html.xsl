@@ -20,8 +20,16 @@
 
     
     <xsl:template match="/">
+        <xsl:call-template name="makeRobots"/>
         <xsl:call-template name="createIndex"/>
         <xsl:call-template name="createChapters"/>
+    </xsl:template>
+    
+    <xsl:template name="makeRobots">
+        <xsl:result-document href="site/robots.txt" method="text">
+            User-agent: * 
+            Disallow: /
+        </xsl:result-document>
     </xsl:template>
     
     <xsl:variable name="toc">

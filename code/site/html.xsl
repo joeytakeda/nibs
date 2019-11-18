@@ -17,9 +17,14 @@
         </xd:desc>
     </xd:doc>
     
-
     
-    <xsl:template match="/">
+
+    <xsl:variable name="path" select="replace(document-uri(.),'HisRoyalNibs.xml','')"/>
+    <xsl:variable name="doc" select="."/>
+    
+    <xsl:template match="TEI">
+        <xsl:message>This document uri: <xsl:value-of select="document-uri(.)"/></xsl:message>
+        <xsl:message>PATH: <xsl:value-of select="$path"/></xsl:message>
         <xsl:call-template name="makeRobots"/>
         <xsl:call-template name="createIndex"/>
         <xsl:call-template name="createChapters"/>
@@ -34,7 +39,7 @@
     
     <xsl:variable name="toc">
         <tei:list>
-            <xsl:for-each select="//div[@type='chapter']">
+            <xsl:for-each select="//processing-instruction('include')/jt:getChapter(.)">
                 <tei:item>
                     <tei:ref target="chapter{@n}.html">Chapter <xsl:value-of select="@n"/></tei:ref>
                 </tei:item>
@@ -70,7 +75,7 @@
                         <section>
                             <h2>Chapters</h2>
                             <ul id="index-toc">
-                                <xsl:for-each select="//div[@type='chapter']">
+                                <xsl:for-each select="//processing-instruction('include')/jt:getChapter(.)">
                                     <li>
                                         <a href="chapter{@n}.html">
                                             <div class="ch-num">
@@ -92,7 +97,7 @@
     
     
     <xsl:template name="createChapters">
-        <xsl:apply-templates select="//div[@type='chapter']" mode="html"/>
+        <xsl:apply-templates select="//processing-instruction('include')/jt:getChapter(.)" mode="html"/>
     </xsl:template>
     
     <xsl:template match="div[@type='chapter']" mode="html">
@@ -104,9 +109,7 @@
                     <xsl:call-template name="addHeaderElements"/>
                 </head>
                 <body>
-                    <xsl:apply-templates select="ancestor::body" mode="toc">
-                        <xsl:with-param name="chapter" select="." tunnel="yes"/>
-                    </xsl:apply-templates>
+                    <xsl:call-template name="makeChaptersToc"/>
                     <main>
                         <article>
                             <xsl:apply-templates mode="#current"/>
@@ -119,7 +122,7 @@
     </xsl:template>
     
     
-    <xsl:template match="body" mode="toc">
+    <xsl:template name="makeChaptersToc">
         <aside id="toc">
             <ul>
                 <li><a href="index.html">Home</a></li>
@@ -128,7 +131,7 @@
                 <li><a href="digital-text.html">Note on the Digital Text</a></li>
                 <li>The Text
                     <ul>
-                        <xsl:apply-templates select="child::div[@type='chapter']" mode="#current"/>
+                        <xsl:apply-templates select="$doc//processing-instruction('include')/jt:getChapter(.)" mode="toc"/>
                     </ul>
                 </li>
                 <li><a href="appendix.html">Appendices</a></li>
@@ -137,11 +140,7 @@
     </xsl:template>
     
     <xsl:template match="div[@type='chapter']" mode="toc">
-        <xsl:param name="chapter" tunnel="yes"/>
-        <li><a href="chapter{@n}.html">
-            <xsl:if test="$chapter is .">
-                <xsl:attribute name="class" select="'current'"/>
-            </xsl:if>Chapter <xsl:value-of select="@n"/></a></li>
+        <li><a href="chapter{@n}.html">Chapter <xsl:value-of select="@n"/></a></li>
     </xsl:template>
     
     <!--Snippet mode-->
@@ -231,6 +230,14 @@
     </xsl:template>
     
     
+    <xsl:function name="jt:getChapter" as="element(div)">
+        <xsl:param name="pi"/>
+        <xsl:variable name="dq">"</xsl:variable>
+        <xsl:variable name="whatChapter" select="translate($pi, $dq, '') => substring-after('href=')" as="xs:string"/>
+        <xsl:message><xsl:value-of select="$pi"/></xsl:message>
+        <xsl:message expand-text="yes">{$whatChapter}</xsl:message>
+        <xsl:sequence select="document(($path || '/' || $whatChapter))/div"/>
+    </xsl:function>
    
     
     <xsl:template match="lb" mode="html">

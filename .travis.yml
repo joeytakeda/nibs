@@ -9,7 +9,7 @@ before_script:
     - mkdir HisRoyalNibs
     - mv site/* HisRoyalNibs
 script:
-    - aws s3 sync HisRoyalNibs s3://joeytakeda --acl public-read
+    - aws s3 sync HisRoyalNibs s3://joeytakeda/HisRoyalNibs --acl public-read --delete
 notifications:
   email:
     recipients:

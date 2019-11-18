@@ -7,7 +7,6 @@ before-script:
     - ant -f build.xml
     - mkdir HisRoyalNibs
     - mv site HisRoyalNibs
-    - rm -r site
 script:
     - aws s3 sync HisRoyalNibs s3://joeytakeda --acl public-read --delete
     - aws cloudfront create-invalidation --distribution-id EOIED742DZBCD --paths '/*'

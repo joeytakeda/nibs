@@ -20,6 +20,20 @@
       <encodingDesc>
          <p>Encoding desc goes here...</p>
       </encodingDesc>
+      <profileDesc>
+         <particDesc>
+            <listPerson>
+               <person xml:id="Cheerio">
+                  <persName>Cheerio</persName>
+               </person>
+               <person xml:id="Sandy"/>
+               <person xml:id="Hilda"/>
+               <person xml:id="PD"/>
+               <person xml:id="Bill"/>
+               <person xml:id="Hootman"/>
+            </listPerson>
+         </particDesc>
+      </profileDesc>
       <revisionDesc>
          <change status="proofed" xml:id="proofed">Chapter proofed</change>
          <change status="draft" xml:id="draft">Chapter in draft</change>

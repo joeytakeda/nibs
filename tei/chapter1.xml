@@ -151,12 +151,12 @@
 <lb/>staring up at the bright blue sky above him.			
 <lb/>As <persName>Bully Bill</persName> rode over, he slowly and easily			
 <lb/>raised himself to a sitting posture.</p>
-            <p><said>Hi! you there!</said> bawled the foreman, in the			
+            <p><said who="#Hootman" toWhom="#Cheerio">Hi! you there!</said> bawled the foreman, in the			
 <lb/>overbearing voice that had earned for him his
             <fw type="pageNum">[12]</fw>
             <pb n="13"/>
             <fw type="pageHeading">His Royal Nibs</fw>
-               nickname. <said>What the hell are you squattin’			
+               nickname. <said who="#Hootman" toWhom="#Cheerio">What the hell are you squattin’			
 <lb/>out here for? What d’ya mean by stirrin’ up			
 <lb/>all this hell of a racket? What the hell d’ya			
 <lb/>want at <placeName>O Bar O</placeName>?</said></p>
@@ -167,7 +167,7 @@
 <lb/>hand to lapse into a stunned silence, as he			
 <lb/>gaped at this curious specimen of the human			
 <lb/>family on the ground before him.</p>
-            <p><said>Ch-cheerio!</said> said the visitor. <said>No harm			
+            <p><said who="#Cheerio" toWhom="#Hootman">Ch-cheerio!</said> said the visitor. <said>No harm			
 <lb/>done. I’m f-first rate, thank you. Not even			
 <lb/>scratched. How are you?</said></p>
             <p><persName>Hootmon</persName> applied his spurs to his horse’s			
@@ -200,7 +200,7 @@
 <lb/>fell into the lap of the Englishman.</p>
             <p>That individual gripped the boy’s arm			
 <lb/>tightly and swung him neatly to his side.</p>
-            <p><said>You leggo my arm!</said></p>
+            <p><said who="#Sandy" toWhom="#Cheerio">You leggo my arm!</said></p>
             <p><persName>Sandy</persName> squirmed from the surprisingly iron			
 <lb/>grip of the visitor.</p>
             <p>The tramp, as they believed him to be, was			
@@ -210,17 +210,17 @@
             <fw type="pageNum">[14]</fw>
             <pb n="15"/>
             <fw type="pageHeading">His Royal Nibs</fw>
-            <p><said>Cheerio, old man!</said> said he, and slapped			
+            <p><said who="#Cheerio" toWhom="#Sandy">Cheerio, old man!</said> said he, and slapped			
 <lb/>the unwillingly impressed youngster upon the			
-<lb/>back. <said>Not hurt much—what?</said></p>
-            <p><said>Hurt—nothing! Whacha take me for?</said></p>
+<lb/>back. <said who="#Cheerio" toWhom="#Sandy">Not hurt much—what?</said></p>
+            <p><said who="#Sandy" toWhom="#Cheerio">Hurt—nothing! Whacha take me for?</said></p>
             <p><persName>Sandy</persName>, a product of <placeName>O Bar O</placeName>, let forth a			
 <lb/>typical string of hot cusses, while the English<pc force="weak">-</pc>			
 <lb/>man grinned down upon him.</p>
-            <p><said>What the hell you doin’ sittin’ on our			
-<lb/>grass?</said> finished <persName>Sandy</persName> shrilly. <said>What cha			
+            <p><said who="#Sandy" toWhom="#Cheerio">What the hell you doin’ sittin’ on our			
+<lb/>grass?</said> finished <persName>Sandy</persName> shrilly. <said who="#Sandy" toWhom="Cheerio">What cha			
 <lb/>want at our ranch?</said></p>
-            <p><said>Oh, I say! Is this a rawnch then?</said></p>
+            <p><said who="#Cheerio" toWhom="#Sandy">Oh, I say! Is this a rawnch then?</said></p>
             <p>He turned a questioning eager gaze upon			
 <lb/>the foreman, who now sat with right leg rest<pc force="weak">-</pc>			
 <lb/>ing across the pummel of the saddle, studying			
@@ -228,7 +228,7 @@
 <lb/>ment, having spat and transferred his plug			
 <lb/>from the left to the right cheek, <persName>Bully Bill</persName>			
 <lb/>replied through the corner of his mouth.</p>
-            <p><said>You betchour life this ain’t no rawnch,			
+            <p><said toWhom="#Cheerio" who="#Bill">You betchour life this ain’t no rawnch,			
 <lb/>Ain’t no <emph>rawnches</emph> this side o’ the river. They			
 <lb/><emph>ranch</emph> on this side</said>.</p>
             <p>The other looked unenlightened, and <persName>Bully			
@@ -237,10 +237,10 @@
             <fw type="pageNum">[15]</fw>
             <pb n="16"/>
             <fw type="pageHeading">His Royal Nibs</fw>
-            <p><said>Yer see, it’s like this. On the south side of			
+            <p><said who="#Bill" toWhom="#Cheerio">Yer see, it’s like this. On the south side of			
 <lb/>the river, there’s a sight of them English			
-<lb/><soCalled>dooks</soCalled> and earls and lords and princes.<!--Maybe here is where I put the contextual note re: WE's article on Dukes etc--> They			
-<lb/>play at rawnching, doncherknow. On the			
+<lb/><soCalled>dooks</soCalled><note type="editorial">I.e. Dukes</note> and earls and lords and princes.<!--Maybe here is where I put the contextual note re: WE's article on Dukes etc--> They			
+<lb/>play at rawnching, doncherknow<note type="editorial">I.e. Don't you know.</note>. On the			
 <lb/>north side, we’re the real cheese. We're out			
 <lb/>to raise beef.<!--Note here about beef industry in Alberta?--> We <emph>ranch</emph>!</said></p>
             <p>Having delivered this explanation of things			
@@ -248,14 +248,14 @@
 <lb/>with himself, dropped his foot back into his			
 <lb/>stirrup and saluted the Englishman conde<pc force="weak">-</pc>			
 <lb/>scendingly:</p>
-            <p><said>Here’s lookin’ at you!</said><!--Research needed here: Is this referring to malboro? Is that relevant yet?--> he said, and gently			
+            <p><said who="#Bill" toWhom="#Cheerio">Here’s lookin’ at you!</said><!--Research needed here: Is this referring to malboro? Is that relevant yet?--> he said, and gently			
 <lb/>pressed his heel into his horse’s side.</p>
-            <p><said>I say———!</said></p>
+            <p><said who="#Cheerio">I say———!</said></p>
             <p>The tramp had sprang to his feet with sur<pc force="weak">-</pc>			
 <lb/>prising agility, and his nervy hand was at the			
 <lb/>mouth of <persName>Bully Bill</persName>’s mount.</p>
-            <p><q>I say, old man, will you hold on a bit? I			
-<lb/>w-wonder now, do you, by any chance, need			
+            <p><said who="#Cheerio" toWhom="#Bill">I say, old man, will you hold on a bit? I			
+<lb/><seg type="stutter">w-w</seg>onder now, do you, by any chance, need			
 <lb/>help on your ranch? Because if you do, I’d			
 <lb/>like to apply for the position. If this is a			
 <lb/>cattle ranch, I'll say that I know a bit about			
@@ -264,9 +264,9 @@
             <fw type="pageNum">[16]</fw>
             <pb n="17"/>
             <fw type="pageHeading">His Royal Nibs</fw>
-<lb/>up from the east. W-w-worked my way out			
-<lb/>here, in fact, and as to w-wages, nominal ones			
-<lb/>will be quite satisfactory as a s-starter</q>.</p>
+<lb/>up from the east. <seg type="stutter">W-w-w</seg>orked my way out			
+<lb/>here, in fact, and as to <seg type="stutter">w-w</seg>ages, nominal ones			
+<lb/>will be quite satisfactory as a <seg type="stutter">s-s</seg>tarter</said>.</p>
             <p><persName>Bully Bill</persName>, his mouth gaped open, was sur<pc force="weak">-</pc>			
 <lb/>veying the applicant from head to foot, his			
 <lb/>trained eye travelling from the top of the			
@@ -276,37 +276,37 @@
 <lb/>painfully inadequate for the trail. <persName>Sandy</persName> was			
 <lb/>doubled up in a knot, howling with fiendish			
 <lb/>glee. <persName>Bully Bill</persName> spat.</p>
-            <p><said>T d-don’t m-mind roughing it at all</said>, con<pc force="weak">-</pc>			
-<lb/>tinued the applicant, wistfully. <q>D-don’t			
+            <p><said who="#Cheerio" toWhom="#Bill">T <seg type="stutter">d-d</seg>on’t <seg type="stutter">m-m</seg>ind roughing it at all</said>, con<pc force="weak">-</pc>			
+<lb/>tinued the applicant, wistfully. <said who="#Cheerio" toWhom="#Bill"><seg type="stutter">D-d</seg>on’t			
 <lb/>judge me by my clothes. Fact is, old man,			
-<lb/>they happen to be all I’ve g-got, you see.			
-<lb/>B-but I’m quite c-competent to——</q></p>
+<lb/>they happen to be all I’ve <seg type="stutter">g-g</seg>ot, you see.			
+<lb/><seg type="stutter">B-b</seg>ut I’m quite <seg type="stutter">c-c</seg>ompetent to——</said></p>
             <p>Bully Bill said dreamily, looking out into			
 <lb/>space, and as if thinking aloud.</p>
-            <p><said>We ain’t as tough as we’re cracked up to be.			
+            <p><said who="#Bill">We ain’t as tough as we’re cracked up to be.			
 <lb/>Of course, they’s one or two stunts you got to			
 <lb/>learn on a cattle ranch—rawnch—beggin’
-<lb/>your pardon———</said></p>
+<lb/>your pardon———</said></p><!--Is this said to Cheerio?-->
             <fw type="pageNum">[17]</fw>
             <pb n="18"/>
             <fw type="pageHeading">His Royal Nibs</fw>
-            <p><q>That’s quite all right, old man. Don’t			
-<lb/>mention it. Is there a chance then for me?</q></p>
+            <p><said who="#Cheerio" toWhom="#Bill">That’s quite all right, old man. Don’t			
+<lb/>mention it. Is there a chance then for me?</said></p>
             <p>There was not a trace of a smile on Bully			
 <lb/>Bill’s face as he solemnly looked down into			
 <lb/>the anxious blue eyes of the applicant.</p>
-            <p><said>They’s the makin’s of a damn fine cowboy			
+            <p><said who="#Bill" toWhom="#Cheerio">They’s the makin’s of a damn fine cowboy			
 <lb/>in you</said>, he said.</p>
-            <p><said>I say!</said></p>
+            <p><said who="#Cheerio" toWhom="#Bill">I say!</said></p>
             <p>A smile broke all over the somewhat			
 <lb/>pinched face of the strange tramp. That smile			
 <lb/>was so engaging, so sunny, so boyish that the			
 <lb/>cowpuncher returned it with a characteristic			
 <lb/>grin of his own.</p>
-            <p><said>D-you really mean to say that I’m en<pc force="weak">-</pc>			
+            <p><said who="#Cheerio" toWhom="#Bill">D-you really mean to say that I’m en<pc force="weak">-</pc>			
 <lb/>gaged?</said></p>
-            <p><said>You betchu</said>.</p>
-            <p><said>Thanks awfully, old man</said>, cried the other			
+            <p><said who="#Bill" toWhom="#Cheerio">You betchu</said>.</p>
+            <p><said who="#Cheerio" toWhom="#Bill">Thanks awfully, old man</said>, cried the other			
 <lb/>cordially, and extended his white hand, which			
 <lb/>gripped the horney one of the cowpuncher, at			
 <lb/>rest on his leather-clad knee.</p>
@@ -322,5 +322,4 @@
 <lb/>Englishman plugged along, and as he came he			
 <lb/>whistled a cheery strain of music.</p>
             <fw type="pageNum">[19]</fw>
-            <pb n="20"/>
          </div>

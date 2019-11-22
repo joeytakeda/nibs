@@ -1,4 +1,6 @@
-<?xml version="1.0" encoding="UTF-8"?><div xmlns="http://www.tei-c.org/ns/1.0" type="chapter" n="2">
+<?xml version="1.0" encoding="UTF-8"?>
+<div xmlns="http://www.tei-c.org/ns/1.0" type="chapter" n="2" change="#proofed">
+            <pb n="20"/>
             <head>Chapter II</head>
             <p><persName rendition="#smallcaps">Sandy</persName> made three somersaults of glee on			
 <lb/>the turf, and at his last turn-over, his head			
@@ -7,20 +9,20 @@
 <lb/>served that which had pained him. It was a			
 <lb/>large, old-fashioned gold locket, studded with			
 <lb/>rubies and diamonds.</p>
-            <p><q>Holy Salmon!</q> ejaculated the highly<pc force="weak">-</pc>			
+            <p><said who="#Sandy">Holy Salmon!</said> ejaculated the highly-		
 <lb/>elated boy. In an instant he had seized the			
 <lb/>bridle of his horse, and was on him. He went			
 <lb/>up the hill on a run, and began calling out<pc force="weak">-</pc>			
 <lb/>side the house, while still on horse.</p>
-            <p><q>Hilda! I say, Hilda! Come on out!			
-<lb/>Looka here what I found!</q></p>
+            <p><said who="#Sandy" toWhom="#Hilda">Hilda! I say, Hilda! Come on out!			
+<lb/>Looka here what <emph>I</emph> found!</said></p>
             <p>A girl, skin bronzed by sun and wind, with			
 <lb/>chocolate-coloured eyes and hair and a cer<pc force="weak">-</pc>			
 <lb/>tain free grace of motion and poise, came on			
 <lb/>to the wide verandah. Sandy had ridden his			
 <lb/>horse clear to the railing, and now he ex<pc force="weak">-</pc>			
 <lb/>citedly held up the trinket in his hand, and</p>
-            <fw type="pageNum">[ 20 ]</fw>
+            <fw type="pageNum">[20]</fw>
             <pb n="21"/>
             <fw type="pageHeading">His Royal Nibs</fw>
             <p>then tossed it to Hilda, who caught it neatly			
@@ -34,12 +36,12 @@
 <lb/>curled behind the glass.</p>
             <p>Sandy had leaped off his horse, and now			
 <lb/>was excitedly grasping after the treasure.</p>
-            <p><q>Wher’d you find it, Sandy?</q></p>
-            <p><q>Down in the lower pasture. Betchu its his			
+            <p><said who="#Hilda" toWhom="#Sandy">Wher’d you find it, Sandy?</said></p>
+            <p><said who="#Sandy" toWhom="#Hilda">Down in the lower pasture. Betchu its his			
 <lb/>girl! Say, Hilda, he’s a scream. You'd			
 <lb/>oughter’ve been there. He came along the			
 <lb/>road all dolled up in city clothes, and—look!			
-<lb/>Oh, my God-frey! Look ut him, Hilda!</q></p>
+<lb/>Oh, my God-frey! Look <choice><sic>u</sic><corr>a</corr></choice>t<note type="questionForMC">Is "ut" a typo or is it part of the dialect? This spelling of "ut" instead of "at" appears nowhere else in the text, but is in both the Burt and Watt.</note> him, Hilda!</said></p>
             <p>In an ecstasy of derision and delight, Sandy			
 <lb/>pointed.</p>
             <p>Hand shading his eyes, the stranger was			
@@ -47,44 +49,44 @@
 <lb/>of gigantic hills, etched against a sky of sheer<pc force="weak">-</pc>			
 <lb/>est blue, upon which the everlasting sun			
 <lb/>glowed.</p>
-            <fw type="pageNum">[21 ]</fw>
+            <fw type="pageNum">[21]</fw>
             <pb n="22"/>
             <fw type="pageHeading">His Royal Nibs</fw>
-            <p><q>By George!</q> exclaimed the new <q>hand</q>			
-<lb/>of the O Bar O, <q>what a tophole view!			
+            <p><said who="#Cheerio">By George!</said> exclaimed the new <q>hand</q>			
+<lb/>of the O Bar O, <said who="#Cheerio">what a tophole view!			
 <lb/>Never saw anything to beat it. Give you my			
-<lb/>word, it b-b-beats S-switzerland. When I			
-<lb/>was tramping along the road, I th-thought</q></p>
-            <p>that was a good one on us at home, ’bout this			
-<lb/>being the Land of Promise, you know, b-but			
+<lb/>word, it <seg type="stutter">b-b-b</seg>eats <seg type="stutter">S-s</seg>witzerland. When I			
+<lb/>was tramping along the road, I <seg type="stutter">th-th</seg>ought</said>
+<lb/>that was a good one on us at home, ’bout this			
+<lb/>being the Land of Promise, you know, <seg type="stutter">b-b</seg>ut			
 <lb/>now, by George! I’m hanged if I don’t think			
 <lb/>you’re right. A chap cannot look across at			
 <lb/>a view like that and not feel jolly well up<pc force="weak">-</pc>			
-<lb/>lifted!</p>
+<lb/>lifted!<note type="editorial">[[Note something about the seemingly excessive use of Britishisms here?]]</note></p>
             <p>There was a ring of men closing in about			
 <lb/>the new arrival, for it was the noon hour, and			
 <lb/>Hootmon had hurried them along from			
 <lb/>bunkhouse and corral. At the stranger’s			
-<lb/>stream of eloquence to Bully Bill anent the			
+<lb/>stream of eloquence to Bully Bill <term>anent</term> the			
 <lb/>beauties of nature in the foothills of the			
-<lb/>Rocky Mountains, ‘<q>Pink-eyed Jake</q> swooned			
+<lb/>Rocky Mountains, <soCalled>Pink-eyed Jake</soCalled> swooned			
 <lb/>away in the arms of Hootmon. A gale of un<pc force="weak">-</pc>			
 <lb/>bridled laughter burst from a dozen throats.			
 <lb/>The men held their sides and leaned forward			
 <lb/>the better to scan this new specimen of the			
-<lb/>human family. Hands on hips, they <q>took his</q></p>
-            <fw type="pageNum">[ 22]</fw>
+<lb/>human family. Hands on hips, they <soCalled xml:id="ch2_sc1_1" next="#ch2_sc1_2">took his</soCalled></p>
+            <fw type="pageNum">[22]</fw>
             <pb n="23"/>
             <fw type="pageHeading">His Royal Nibs</fw>
-            <p>number and pronounced him internally a</p>
-            <p>freak of nature.</p>
+            <p><soCalled xml:id="ch2_sc1_2" prev="#ch2_sc1_1">number</soCalled> and pronounced him internally a
+                        <lb/>freak of nature.</p>
             <p>To the door of the cook-car, rolled the im<pc force="weak">-</pc>			
 <lb/>mense form of Tom Chum Lee, the Chinese			
 <lb/>cook who dominated the grub-car of O Bar O.			
 <lb/>With a vast smile of benignant humour di<pc force="weak">-</pc>			
-<lb/>rected upon his <q>boys</q>, Lee summoned all			
+<lb/>rected upon his <soCalled>boys</soCalled>, Lee summoned all			
 <lb/>hands to chow, by means of a great cow bell,			
-<lb/>that he waved generously back and forth.</p>
+<lb/>that he waved generously back and forth.<note type="editorial">Note here about Chinese cook characters; he's also in Cattle.</note></p>
             <p>With immense satisfaction and relish, the			
 <lb/>newcomer was taking in all of the colour and			
 <lb/>atmosphere of the ranch. The fact that he			
@@ -104,37 +106,37 @@
             <fw type="pageHeading">His Royal Nibs</fw>
             <p>hand of O Bar O. There was in it, despite its			
 <lb/>mockery, a haughty accent of contempt.</p>
-            <p><q>Who’s his royal nibs, Bully Bill?</q></p>
+            <p><said who="#Hilda" toWhom="#Bill">Who’s his royal nibs,<note type="questionForMC">Should I gloss this now or in the title? Or both?</note> Bully Bill?</said></p>
             <p>Through the corner of his mouth, the fore<pc force="weak">-</pc>			
 <lb/>man enlightened her:</p>
-            <p><q>Vodeyveel show. Things gittin’ kind o’			
-<lb/>dull atO Bar. Thought Id pull in something			
+            <p><said who="#Bill" toWhom="#Hilda">Vodeyveel show.<note type="editorial">I.e. Vaudeville Show.</note> Things gittin’ kind o’			
+<lb/>dull at O Bar. Thought Id pull in something			
 <lb/>to cheer the fellows up a bit, and they’s noth<pc force="weak">-</pc>			
-<lb/>ing tickles them more than turnin’ a green ten<pc force="weak">-</pc>			
-<lb/>derfoot Englishman on to them. This one			
+<lb/>ing tickles them more than turnin’ a <term>green</term> <term>ten<pc force="weak">-</pc>			
+<lb/>derfoot</term> Englishman on to them. This one			
 <lb/>here is a circus. When I asked him what the			
-<lb/>hello—excuse me, Miss Hilda!—what the			
+<lb/>hello—excuse me, Miss Hilda!—<note type="questionForMC">Is it worth tagging explitives/swearing/etc? (Godfrey, What the hello, et cetera?).</note>what the			
 <lb/>hello he was doin’ round here, he ses:			
-<lb/>‘Cheerio!’ Say, if ever there was ‘Kid me’			
+<lb/><q>Cheerio!</q> Say, if ever there was <q>Kid me</q>			
 <lb/>writ all over a human bein’, it’s splashed over			
-<lb/>that there one</q>.</p>
-            <p><q>Wm !</q></p>
-            <p>Hilda came down the steps and approached</p>
-            <p>the newcomer. Head slightly on one side, she			
+<lb/>that there one</said>.</p>
+            <p><said who="#Hilda">Um!</said><note type="questionForMC">Is this Hilda speaking here?</note></p>
+            <p>Hilda came down the steps and approached
+<lb/>the newcomer. Head slightly on one side, she			
 <lb/>examined him with evident curiosity and			
-<lb/>amusement. ‘<q>Paper-collar dudes</q>, as the			
+<lb/>amusement. <soCalled>Paper-collar dudes</soCalled>, as the			
 <lb/>ranch folk called the city people, came quite			
 <lb/>often to O Bar O, but this particular specimen			
-<lb/>seemed somehow especially green and guile-</p>
+<lb/>seemed somehow especially <term>green</term> and guile<pc force="weak">-</pc></p>
             <fw type="pageNum">[ 24 ]</fw>
             <pb n="25"/>
             <fw type="pageHeading">His Royal Nibs</fw>
             <p>less. A wicked dimple flashed out in the right			
 <lb/>cheek of the girl, though her critical eyes were			
-<lb/>still cold as she looked the man over from head</p>
-            <p>to foot.</p>
-            <p><q>Hi-yil You! Where do you hail from?</q></p>
-            <p>As he looked up at the beautiful, saucy			
+<lb/>still cold as she looked the man over from head
+<lb/>to foot.</p>
+            <p><said who="#Hilda" toWhom="#Cheerio"><term>Hi-yi!</term><note type="questionForMC">How best to gloss this term? For instance, there's stuff like <ref target="https://www.loc.gov/resource/ihas.100005511.0">this</ref> that looks </note> You! Where do you hail from?</said></p>
+            <p>As he looked up at the beautiful, <term>saucy</term>			
 <lb/>young creature before him, the Englishman			
 <lb/>was seized with one of his worst spells of stut<pc force="weak">-</pc>			
 <lb/>tering. The impediment in his speech was			
@@ -142,43 +144,43 @@
 <lb/>moved, and at psychological moments, when			
 <lb/>the tongue’s office was the most desired of ad<pc force="weak">-</pc>			
 <lb/>juncts, it generally failed him. Now:</p>
-            <p><q>Bb-b-b-b-b-b-b-b-b-b——</q></p>
+            <p><said who="#Cheerio" toWhom="#Hilda"><seg type="stutter">Bb-b-b-b-b-b-b-b-b-b——</seg></said></p>
             <p>The girl, hands on hips, swayed back and			
 <lb/>forth with laughter.</p>
-            <p><q>Haven't you a tongue even? What are you			
+            <p><said who="#Hilda" toWhom="#Cheerio">Haven't you a tongue even? What are you			
 <lb/>doing in this wild country, you poor lost lamb			
-<lb/>from the fold?</q></p>
+<lb/>from the fold?</said><note type="editorial"/></p>
             <p>He had recovered his wits, and the use of			
 <lb/>his tongue. His heels came together with a			
 <lb/>curiously smart and military click, and his			
 <lb/>blue eyes looked squarely into the impudent</p>
-            <fw type="pageNum">[25 ]</fw>
+            <fw type="pageNum">[25]</fw>
             <pb n="26"/>
             <fw type="pageHeading">His Royal Nibs</fw>
             <p>brown ones of the girl, laughing in his face.			
 <lb/>With complete gravity, he replied:</p>
-            <p><q>J-just came across to the p-promised land,			
-<lb/>to try and make a home for myself and—</q> he			
-<lb/>paused, smiling sunnily—‘‘and another, you			
-<lb/>know.</p>
-            <p><q>Now wasn’t that the great idea!</q> guyed the			
-<lb/>girl, with mock seriousness. ‘And who’s the			
+            <p><said who="#Cheerio" toWhom="#Hilda"><seg type="stutter">J-j</seg>ust came across to the <seg type="stutter">p-p</seg>romised land,			
+<lb/>to try and make a home for myself and—</said> he			
+<lb/>paused, smiling sunnily—<said who="#Cheerio" toWhom="#Hilda">and another, you			
+<lb/>know.</said></p>
+            <p><said who="#Hilda" toWhom="#Cheerio">Now wasn’t that the great idea!</said> <term>guyed</term> the			
+<lb/>girl, with mock seriousness. <said who="#Hilda" toWhom="#Cheerio">And who’s the			
 <lb/>other one, by the way? Another like your			
-<lb/>Do tell us.</p>
-            <p><q>Her name’s—Nanna, we call her</q>.</p>
-            <p><q>Nanna! Nanna! What a sweet name!</q></p>
+<lb/>Do tell us.</said></p>
+            <p><said who="#Cheerio" toWhom="#Hilda">Her name’s—Nanna, we call her</said>.</p>
+            <p><said who="#Hilda" toWhom="#Cheerio">Nanna! Nanna! What a sweet name!</said></p>
             <p>She was still mocking, but suddenly swung			
 <lb/>the locket on its chain toward him.</p>
-            <p><q>Do you know, I believe we’ve found your			
+            <p><said who="#Hilda" toWhom="#Cheerio">Do you know, I believe we’ve found your			
 <lb/>long-lost Nanna. I was just admiring her fair,			
-<lb/>sweet face inside. Catch her!</q></p>
+<lb/>sweet face inside. Catch her!</said></p>
             <p>She tossed it across to him. It dropped on			
 <lb/>the stones between them. He stooped to pick			
 <lb/>it up, and anxiously examined it, before turn<pc force="weak">-</pc>			
 <lb/>ing to look back at the girl with a slightly stern			
 <lb/>glance.</p>
-            <p><q>Righto!</q> he said. <q>Thanks for returning			
-<lb/>her to me</q>.</p>
+            <p><said who="#Cheerio" toWhom="#Hilda">Righto!</said> he said. <said who="#Cheerio" toWhom="#Hilda">Thanks for returning			
+<lb/>her to me</said>.</p>
             <fw type="pageNum">[ 26 J</fw>
             <pb n="27"/>
             <fw type="pageHeading">His Royal Nibs</fw>
@@ -186,25 +188,25 @@
 <lb/>mood changed. She tossed her head, as the			
 <lb/>colour flooded her face. Something wild and			
 <lb/>free in that tossing suggested the motion of a			
-<lb/>young thoroughbred colt. Affecting great			
+<lb/>young thoroughbred colt.<note type="editorial">Here, another moment of Hilda's affiliation with animal; note that it's <q>thoroughbred</q> here.</note> Affecting great			
 <lb/>disdain, and as if looking down at him from a			
 <lb/>height, she inquired:</p>
-            <p><q>Oh, by the way, what’s your name?</q></p>
+            <p><said who="#Hilda" toWhom="#Cheerio">Oh, by the way, what’s your name?</said></p>
             <p>He absently fished in his vest pocket, and			
 <lb/>this action provoked a fresh gale of laughter			
 <lb/>from the highly edified hands, in which the			
 <lb/>girl heartily joined. At the laughter, he			
 <lb/>looked up, slightly whistled, and said in his			
 <lb/>friendly way:</p>
-            <p><q>Cheerio!</q></p>
-            <p><q>Cheerio!</q> repeated the girl. <q>Some name.			
+            <p><said who="#Cheerio" toWhom="#Hilda">Cheerio!</said></p>
+            <p><said who="#Hilda" toWhom="#Cheerio">Cheerio!</said> repeated the girl. <said toWhom="#Cheerio" who="#Hilda">Some name.	
 <lb/>Boys, allow me—Cheerio, Duke of the O Bar			
 <lb/>O. Escort his grace to the dining-car, and			
-<lb/>mind you treat him gentle. And say, boys—</q>			
-<lb/>she called after them, <q>doll him up in O Bar O			
+<lb/>mind you treat him gentle. And say, boys—</said>			
+<lb/>she called after them, <said who="#Hilda">doll him up in O Bar O			
 <lb/>duds. Let’s see what he looks like in reglar			
-<lb/>clothes</q>.</p>
-            <p>Shoved along by the men, <q>his grace</q> was			
+<lb/>clothes</said>.</p>
+            <p>Shoved along by the men, <soCalled>his grace</soCalled> was			
 <lb/>pushed and hustled into the cook-car. Here</p>
             <fw type="pageNum">[27]</fw>
             <pb n="28"/>
@@ -213,7 +215,7 @@
 <lb/>being slapped into each bowl along the line of			
 <lb/>plates, almost caused the hungry Englishman			
 <lb/>to faint. Nevertheless, he kept what he would			
-<lb/>have termed <q>stiff upper lip</q>, and as the			
+<lb/>have termed <soCalled>stiff upper lip</soCalled>,<note type="editorial">Something here?</note> and as the			
 <lb/>Chinaman passed down between the long			
 <lb/>bench tables, and filled the bowl before the			
 <lb/>newcomer, Cheerio, as he was henceforward to			
@@ -221,10 +223,10 @@
 <lb/>fall to upon that thick, delicious soup, and,			
 <lb/>smiling instead, turned to the man on either			
 <lb/>side of him, with a cigarette case in his hand:</p>
-            <p><q>Have one, old man, do. P-pretty g-good			
+            <p><said who="#Cheerio">Have one, old man, do. <seg type="stutter">P-p</seg>retty <seg type="stutter">g-g</seg>ood		
 <lb/>stuff! Got them in France, you know. Be<pc force="weak">-</pc>			
 <lb/>lieve I’ll have one myself before starting in,			
-<lb/>you know. Topping—what?</q></p>
+<lb/>you know. Topping—what?</said><note type="editorial">Not sure what's happening here? Adams has a number of entries for "top" stuff, including topping (<quote>removing the crown of a living tree in order to use it for a spar for high-line assembling</quote>, but also <quote>top</quote>, which he simply glosses as <quote>A cowboy's word for best</quote>. So not sure </note></p>
             <fw type="pageNum">[28]</fw>
             <pb n="29"/>
          </div>

@@ -17,11 +17,12 @@
   <text>
     <body>
       <schemaSpec ident="oddex1" start="TEI div">
-        <moduleRef key="analysis" include="pc seg"/>
+        <moduleRef key="analysis" include="pc"/>
         <moduleRef key="core"/>
+        <moduleRef key="corpus" include="particDesc"/>
         <moduleRef key="header"/>
-
-        <moduleRef key="namesdates" include="persName placeName"/>
+        <moduleRef key="linking" include="seg"/>
+        <moduleRef key="namesdates" include="persName placeName listPerson person"/>
         <moduleRef key="tei"/>
         <moduleRef key="textstructure"/>
         <moduleRef key="transcr" include="fw"/>

@@ -4,9 +4,15 @@
 /******* START CSS ************/
 
 
+/********** SCALES  */
+
+
 :root{
-    font-size:1em;
+
     line-height:1.6;
+    --scale: 1.333;
+    --base: 1rem;
+    font-size:var(--base);
 }
 
 
@@ -131,11 +137,24 @@ a.error:hover{
     display:none;
 }
 
+h1{
+    font-size: calc(var(--scale) * 3 * var(--base));
+}
+
 h2{
-    font-size:1.85rem;
-    text-align:center;
+    font-size: calc(var(--scale) * 2 * var(--base));
+       text-align:center;
     margin:1rem 0;
 }
+
+h3{
+    font-size: calc(var(--scale) * 1 * var(--base));
+}
+
+h4{
+    font-size: calc(var(--scale) * 1 * var(--base));
+}
+
 
 
 aside{
@@ -195,11 +214,15 @@ br, [data-el='fw'], hr, [data-el='pc']{
 
 /* ********************* EDITORIAL NOTES AND QUESTION NOTES */
 .noteMarker{
-    font-size:.75rem;
-    vertical-align:super;
-    padding-left:0.1rem;
-    opacity:0.5;
-    transition:opacity 0.25s;
+    font-size: 0.9rem;
+    vertical-align: super;
+    padding: 0.25rem 0.5rem;
+    opacity: 0.75;
+    transition: opacity 0.25s;
+    background-color: #efefef;
+    border-radius: 1rem;
+    color: black;
+    border: none;
 }
 
 .noteMarker:hover{
@@ -254,8 +277,6 @@ br, [data-el='fw'], hr, [data-el='pc']{
     height:30rem;
     width:45rem;
     transform:translateY(30.2rem);
-     transition: width 0.2s ease-in-out,
-                height 0.2s ease-in-out;
 }
 
 #popup_controls{

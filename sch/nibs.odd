@@ -22,7 +22,7 @@
         <moduleRef key="core"/>
         <moduleRef key="corpus" include="particDesc"/>
         <moduleRef key="header"/>
-        <moduleRef key="linking" include="seg"/>
+        <moduleRef key="linking" include="seg linkGrp"/>
         <moduleRef key="namesdates" include="persName placeName listPerson person listPlace place placeName location geo"/>
         <moduleRef key="tei"/>
         <moduleRef key="textstructure"/>

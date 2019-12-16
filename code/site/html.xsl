@@ -242,8 +242,27 @@
     <xsl:template match="place/location[geo]" mode="appendix">
         <div class="map"></div>
     </xsl:template>
+   
+   
+   <xsl:template match="linkGrp[ptr]" mode="appendix">
+       <div>
+           <xsl:call-template name="processAtts"/>
+           <h4>See also:</h4>
+           <ul>
+               <xsl:for-each select="ptr">
+                   <li>
+                       <xsl:apply-templates select="." mode="#current"/>
+                   </li>
+               </xsl:for-each>
+           </ul>
+       </div>
+   </xsl:template>
     
-    
+    <xsl:template match="ptr" mode="appendix html">
+        <a href="{@target}">
+            <xsl:value-of select="if (@n) then @n else @target"/>
+        </a>
+    </xsl:template>
      
  
     

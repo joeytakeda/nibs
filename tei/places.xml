@@ -30,12 +30,36 @@
                         <placeName>O Bar O</placeName>
                     </place>
                     
+                    <place xml:id="albe1">
+                        <placeName>Alberta</placeName>
+                        <location>
+                            <geo>54.499998, -115.0</geo>
+                        </location>
+                        <note>The westernmost prairie province, Alberta ....</note>
+                        <linkGrp>
+                            <ptr target="https://thecanadianencyclopedia.ca/en/article/alberta" n="Canadian Encyclopedia"/>
+                        </linkGrp>
+                    </place>
+                    
                     <place xml:id="banf1">
                         <placeName>Banff</placeName>
                         <location>
                             <geo>51.1777781, -115.5682504</geo>
                         </location>
                         <note>A small town in Alberta near the Rocky Mountains. Historically, Banff was </note>
+                    </place>
+                    
+                    <place xml:id="calg1">
+                        <placeName>Calgary</placeName>
+                        <location>
+                            <geo>51.044270, -114.062019</geo>
+                        </location>
+                        <note>The city now known as Calgary is situated on Blackfoot, Tsuut'ina, Îyâxe Nakoda, and Metis territory and is under the urisdiction of Treaty 7.</note>
+                        <linkGrp>
+                            <ptr target="https://thecanadianencyclopedia.ca/en/article/calgary" n="Canadian Encyclopedia"/>
+                            
+                        </linkGrp>
+                        
                     </place>
                     
                 </listPlace>

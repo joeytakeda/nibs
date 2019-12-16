@@ -34,7 +34,40 @@
                     <label>tramp</label>
                     <gloss source="bibl:oedi1"><quote>one who travels from place to place on foot, in search of employment, or as a vagrant</quote> (tramp, n.1, 4a)</gloss>
                 </item>
-                
+                <item xml:id="dogi1">
+                    <label>dogies</label>
+                    <gloss source="bibl:oedi1"><quote>Originally: an unacclimatized young heifer or steer on a range. Subsequently: a neglected or undernourished calf, esp. one without a mother</quote> (dogie, n)</gloss>
+                    <gloss source="bibl:adam1"><quote>A scrubby calf that has not wintered well and is anemic from the scant food of the cold months</quote>. Adams' recounts the origin of the term:
+                        <quote type="block">
+                            Although the word os used commonly in the West and is understood by all cattlemen, there has been some controversy over its origin. One version is that during trail days, when it was discovered that the northern range was good cow country, especially for fattening beef, there arose a demand for young animals. <gap reason="editorial"/> Another, more likely, version is that the term originated in the eighties after a very severe winter had killed off a number of orphen calves. The bellies of the survivors very much resembled a batch of sour dough carried in a sac. <gap reason="editorial"/> During the roundup all orphan calves became known as dough-guts; later the term was shortened to dogie. <bibl>96–97</bibl></quote>
+                    </gloss>
+                </item>
+                <item xml:id="humm1">
+                    <label>hummock</label>
+                   <gloss>A small raised hill</gloss>
+                    <gloss source="bibl:oedi1"><quote>A protuberance or boss of earth, rock, etc., usually conical or dome-shaped, rising above the general level of a surface; a low hillock or knoll</quote> (hummock, n, 1)</gloss>
+                </item>
+                <item xml:id="coul1">
+                    <label>coulie</label>
+                    <gloss>A trench or other depression in the earth. Also: coulee.</gloss>
+                    <gloss source="bibl:oedi1"><quote>A deep ravine or gulch scooped out by heavy rain or melting snow, but dry in summer</quote> (coulée, n, 2)</gloss>
+                </item>
+                <item xml:id="plug1">
+                    <label>plug</label>
+                    <gloss source="bibl:oedi1"><quote>A cake or stick of tobacco; a piece of this, esp. for chewing</quote> (plug, n, II.6)</gloss>
+                </item>
+                <item xml:id="roan1">
+                    <label>roan</label>
+                    <gloss source="bibl:adam1"><quote>A horse with more or less uniformed mixture of white and colored hairs over the entire body</quote> (253)</gloss>
+                </item>
+                <item xml:id="indi1">
+                    <label>Indian</label>
+                    <gloss>Now understood primarily as a slur, <q>Indian</q> refers to Indigenous people of what is now North America, particularly, but not exclusively, Indigenous peoples of plains and the midwest. It was, and continues to be, the legal term for Indigenous people in Canada.</gloss>
+                 <linkGrp>
+                     <ptr target="https://thecanadianencyclopedia.ca/en/article/indian" n="The Canadian Encyclopedia"/>
+                     <ptr target="https://www.dchp.ca/dchp2/Entries/view/Indian" n="DHCP2"/>
+                 </linkGrp>   
+                </item>
             </list>
         </body>
     </text>

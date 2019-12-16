@@ -139,20 +139,23 @@ a.error:hover{
 
 h1{
     font-size: calc(var(--scale) * 3 * var(--base));
+    margin:1rem 0;
 }
 
 h2{
     font-size: calc(var(--scale) * 2 * var(--base));
-       text-align:center;
+    text-align:center;
     margin:1rem 0;
 }
 
 h3{
     font-size: calc(var(--scale) * 1 * var(--base));
+    margin:1rem 0;
 }
 
 h4{
     font-size: calc(var(--scale) * 1 * var(--base));
+    margin:1rem 0;
 }
 
 
@@ -160,7 +163,8 @@ h4{
 aside{
     height:100vh;
     overflow-y:scroll;
-    width: 18rem;
+    max-width:100%;
+    min-width:20%;
     position:sticky;
     top:0;
     border-right:1px solid #ccc;
@@ -263,9 +267,7 @@ br, [data-el='fw'], hr, [data-el='pc']{
     border: 1px solid rgba(40,40,40,.08);
     background: white;
     overflow-y: scroll;
-    transition: transform 0.5s ease-in-out,
-                width 0.2s ease-in-out,
-                height 0.2s ease-in-out;
+    transition: transform 0.5s ease-in-out;
     background-image: linear-gradient(120deg, #fdfbfb 0%, #ebedee 100%);
     box-shadow: 1px 1px 6px 1px #ccc;
     display: flex;
@@ -298,7 +300,6 @@ br, [data-el='fw'], hr, [data-el='pc']{
 #popup_closer{
     font-weight: 200;
     font-size: 120%;
-
     padding:0 3rem;
 }
 
@@ -312,14 +313,26 @@ br, [data-el='fw'], hr, [data-el='pc']{
 
 #popup.enabled{
     transform: translateY(0);
-     transition: transform 0.5s ease-in-out;
+    transition: transform 0.5s ease-in-out;
 }
 
 
 #popup_content{
-    margin:0 0 1rem 3rem;
-    max-width:80%;
-    padding-left:1.75rem;
+    margin:0 0 1rem 1.2rem;
+    font-size:90%;
+}
+
+
+
+[data-el='gloss']{
+    margin-bottom:1.25rem;
+}
+
+[data-el='gloss'] .abbr{
+    font-weight:bold;
+}
+[data-el='gloss'] .content{
+    margin-left:0.5rem;
 }
 
 

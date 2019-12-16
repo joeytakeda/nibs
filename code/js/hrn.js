@@ -33,19 +33,21 @@ function scrollToChapter(){
     }, false);
     
      var localLinks = el.querySelectorAll("a[href^='#']");
-     
      localLinks.forEach(function(l){
-         var ref = l.getAttribute('href');
-         if (ref.length > 1){
-           if (document.getElementById('appendix').querySelectorAll(l.getAttribute('href')).length == 1){
-             l.classList.add('js');   
-             addPopupEvent(l); 
+        if (l.closest('.map') == null){
+           var ref = l.getAttribute('href');
+             if (ref.length > 1){
+                if (document.getElementById('appendix').querySelectorAll(l.getAttribute('href')).length == 1){
+                    l.classList.add('js');   
+                    addPopupEvent(l); 
+                } else {
+                    l.classList.add('error');
+                }
             } else {
                 l.classList.add('error');
-            }
-         } else {
-             l.classList.add('error');
-         }
+         }  
+        }
+        
      });
  }
  
@@ -84,7 +86,7 @@ function scrollToChapter(){
          var thisLat = content.getAttribute('data-lat');
          var thisLon = content.getAttribute('data-lon');
          var latLng = L.latLng(thisLat * 1, thisLon * 1);
-         var map = L.map(mapDiv).setView(latLng, 12);
+         var map = L.map(mapDiv).setView(latLng, 13);
  
       // add the OpenStreetMap tiles
       L.tileLayer('https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png', {
@@ -95,10 +97,7 @@ function scrollToChapter(){
 
       // show the scale bar on the lower left corner
       L.control.scale().addTo(map);
-      
-      
-      console.log(latLng);
-      
+      popupDiv.classList.add('big');
      }
       popupDiv.setAttribute('data-src', content.id);
       popupDiv.classList.add('enabled');
@@ -170,6 +169,9 @@ function scrollToChapter(){
  function clearPopup(){
       var popup = document.getElementById('popup');
       popup.removeAttribute('data-src');
+      if (popup.classList.contains('big')){
+          popup.classList.remove('big');
+      }
       var popup_content = document.getElementById('popup_content');
       while (popup_content.childNodes.length > 0){
          popup_content.removeChild(popup_content.childNodes[0]);

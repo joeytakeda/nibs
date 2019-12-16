@@ -1,6 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <TEI xmlns:xi="http://www.w3.org/2001/XInclude" xmlns:svg="http://www.w3.org/2000/svg"
-  xmlns:math="http://www.w3.org/1998/Math/MathML" xmlns="http://www.tei-c.org/ns/1.0">
+  xmlns:math="http://www.w3.org/1998/Math/MathML" xmlns="http://www.tei-c.org/ns/1.0" 
+  xmlns:sch="http://purl.oclc.org/dsdl/schematron">
   <teiHeader>
     <fileDesc>
       <titleStmt>
@@ -22,10 +23,46 @@
         <moduleRef key="corpus" include="particDesc"/>
         <moduleRef key="header"/>
         <moduleRef key="linking" include="seg"/>
-        <moduleRef key="namesdates" include="persName placeName listPerson person"/>
+        <moduleRef key="namesdates" include="persName placeName listPerson person listPlace place placeName location geo"/>
         <moduleRef key="tei"/>
         <moduleRef key="textstructure"/>
         <moduleRef key="transcr" include="fw"/>
+        
+        <elementSpec ident="gloss" mode="change" module="core">
+          <attList>
+            <attDef ident="source" mode="replace">
+              <datatype minOccurs="1" maxOccurs="unbounded">
+                  <dataRef name="anyURI" />
+              </datatype>
+              <valList type="semi">
+                <valItem ident="bibl:oedi1" mode="add">
+                  <desc>OED</desc>
+                  <gloss>A glossary sourced from the OED</gloss>
+                </valItem>
+                <valItem ident="bibl:dchp1" mode="add">
+                  <desc>DHCP</desc>
+                  <gloss>A glossary sourced from the DHCP</gloss>
+                </valItem>
+                <valItem ident="bibl:adam1" mode="add">
+                  <desc>Adams</desc>
+                  <gloss>A glossary item sourced from Adams.</gloss>
+                </valItem>
+              </valList>
+              
+            </attDef>
+          </attList>
+        </elementSpec>
+        
+        
+        <constraintSpec ident="notesInBodyMustBeEditorial" scheme="schematron">
+          <constraint>
+            <sch:rule context="tei:note[not(@type=('editorial','questionForMC'))]">
+              <sch:assert test="ancestor::tei:place or ancestor::tei:teiHeader or ancestor::tei:list[@type='glossary']">
+                ERROR: All notes in the body of a text must be of type editorial or a question for MC.
+              </sch:assert>
+            </sch:rule>
+          </constraint>
+        </constraintSpec>
       </schemaSpec>
     </body>
   </text>

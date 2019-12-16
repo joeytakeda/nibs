@@ -19,6 +19,36 @@ body{
 ::selection{
     background:rgba(201, 89, 89,0.4);
 }
+
+
+/* Terms, placenames, and other links; these will
+ * be replaced with main a once it's done */
+
+a{
+    padding-bottom:.125rem;
+    border-bottom: .1rem solid;
+    border-bottom-color: rgba(236, 200, 47,0.9);
+    transition: border-bottom 0.25s ease-in-out;
+    cursor:pointer;
+}
+
+
+a.error{
+    border-bottom:none;
+    pointer-events:none;
+    cursor:inherit;
+}
+
+a:hover,
+a.active{
+       border-bottom-color: rgba(206, 172, 30, 1);
+
+}
+
+a.error:hover{
+    border-bottom:none;
+}
+
 #index main{
     max-width:60rem;
 }
@@ -128,6 +158,13 @@ aside li{
     border-bottom:1px solid #ccc;
 }
 
+aside a{
+    border-bottom:none;
+}
+
+aside a:hover{
+    border-bottom:none;
+}
 li:last-child{
     border-bottom:none;
 }
@@ -156,7 +193,7 @@ br, [data-el='fw'], hr, [data-el='pc']{
     display:none;
 }
 
-
+/* ********************* EDITORIAL NOTES AND QUESTION NOTES */
 .noteMarker{
     font-size:.75rem;
     vertical-align:super;
@@ -169,22 +206,102 @@ br, [data-el='fw'], hr, [data-el='pc']{
     opacity:1;
 }
 
-/* Terms, placenames, and other links; these will
- * be replaced with main a once it's done */
-
-[data-el='term'], [data-el='placeName']{
-    padding-bottom:.125rem;
-    border-bottom: .1rem solid;
-    border-bottom-color: rgba(236, 200, 47,0.9);
-    transition: border-bottom 0.25s ease-in-out;
-    cursor:pointer;
+[data-type='questionForMC']{
+    width: 10rem;
+    float: right;
+    background:white;
+    clear: both;
+    margin-right: -13rem;
+    padding: 0.5rem;
+    border: 1px dashed #ccc;
+    font-size: 0.8rem;
+    display: inline-block;
 }
 
-[data-el='term']:hover, [data-el='placeName']:hover{
-       border-bottom-color: rgba(206, 172, 30, 1);
-
-
+[data-type='question']:hover{
+     background: pink;
 }
+
+[data-type="question"]:hover > [data-el='note']{
+    border-color:red;
+}
+
+
+/********************************************************* POPUPS */
+
+
+#popup{
+    position: fixed;
+    height:20rem;
+    right:0;
+    bottom:0;
+    width:30rem;
+    border-radius: .25rem;
+    border: 1px solid rgba(40,40,40,.08);
+    background: white;
+    overflow-y: scroll;
+    transition: transform 0.5s ease-in-out;
+    background-image: linear-gradient(120deg, #fdfbfb 0%, #ebedee 100%);
+    box-shadow: 1px 1px 6px 1px #ccc;
+    display: flex;
+    flex-direction:column;
+    transform:translateY(20.2rem);
+}
+
+
+#popup_controls{
+    width:100%;
+    display:flex;
+    justify-content:space-around;
+}
+
+#popup_controls > span{
+    opacity: 0.7;
+    cursor: pointer;
+}
+
+#popup_controls .disabled{
+    opacity:0.4;
+    cursor:inherit;
+}
+
+#popup_closer{
+    font-weight: 200;
+    font-size: 120%;
+
+    padding:0 3rem;
+}
+
+
+.map{
+    width:20rem;
+    height:15rem;
+}
+
+
+#popup.enabled{
+    transform: translateY(0);
+    transition: transform 0.45s ease-in-out;
+}
+
+#popup_content{
+    margin:0 0 1rem 3rem;
+    max-width:80%;
+    padding-left:1.75rem;
+}
+
+
+
+
+
+
+#popup_controls > span:not(.disabled):hover{
+    opacity:1;
+    transition:opacity 0.25s ease-in-out;
+}
+
+
+/***************************************************** END POPUPS  */
 
 
 

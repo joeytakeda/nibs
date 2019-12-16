@@ -1,0 +1,42 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<TEI xml:id="bibliography" xmlns="http://www.tei-c.org/ns/1.0">
+    <teiHeader>
+        <fileDesc>
+            <titleStmt>
+                <title>Bibliography</title>
+                <respStmt>
+                    <resp>Editor</resp>
+                    <name>Joey Takeda</name>
+                </respStmt>
+            </titleStmt>
+            <publicationStmt>
+                <p>TBA</p>
+            </publicationStmt>
+            <sourceDesc><p>TBA</p></sourceDesc>
+        </fileDesc>
+        <encodingDesc>
+            <p>Encoding desc goes here...</p>
+        </encodingDesc>
+        <revisionDesc>
+            <change status="proofed" xml:id="proofed">Chapter proofed</change>
+            <change status="draft" xml:id="draft">Chapter in draft</change>
+        </revisionDesc>
+    </teiHeader>
+    <text>
+        <body>
+            <listBibl>
+                <bibl xml:id="adam1" n="Adams">
+                    <author>Adams, Ramon F.</author> <title level="m">Western Words: A Dictionary of the American West</title>. 2nd edition. University of Oklahoma Press, <date>1968</date>.
+                </bibl>
+                <bibl xml:id="oedi1" n="OED">
+                    <title level="m">Oxford English Dictionary</title>.
+                </bibl>
+                
+                <bibl xml:id="dchp1" n="DCHP-2">
+                    <editor>Dollinger, Stefan</editor> (chief editor) and <editor>Margery Fee</editor> (associate editor). <title level="m">DCHP-2: The Dictionary of Canadianisms on Historical Principles, Second Edition</title>. With the assistance of Baillie Ford, Alexandra Gaylie, and Gabrielle Lim. University of British Columbia. <ptr target="http://www.dchp.ca/dchp2/"/>.
+                </bibl>
+                
+            </listBibl>
+        </body>
+    </text>
+</TEI>

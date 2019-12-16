@@ -22,9 +22,13 @@
     <xsl:variable name="path" select="replace(document-uri(.),'HisRoyalNibs.xml','')"/>
     <xsl:variable name="doc" select="."/>
     
+    <xsl:variable name="glossary" select="document($path || 'glossary.xml')"/>
+    
+    <xsl:variable name="bibliography" select="document($path || 'bibliography.xml')"/>
+    
+    <xsl:variable name="places" select="document($path || 'places.xml')"/>
+    
     <xsl:template match="TEI">
-        <xsl:message>This document uri: <xsl:value-of select="document-uri(.)"/></xsl:message>
-        <xsl:message>PATH: <xsl:value-of select="$path"/></xsl:message>
         <xsl:call-template name="makeRobots"/>
         <xsl:call-template name="createIndex"/>
         <xsl:call-template name="createChapters"/>
@@ -114,7 +118,17 @@
                         <article>
                             <xsl:apply-templates mode="#current"/>
                         </article>
-                        <xsl:call-template name="createNotes"/>
+                        <div id="appendix">
+                            <xsl:call-template name="createAnnotations"/>
+                        </div>
+                        <div id="popup">
+                            <div id="popup_controls">
+                                <span id="prevAnn">Previous</span>
+                                <span id="nextAnn">Next</span>
+                                <span id="popup_closer">X</span>
+                            </div>
+                            <div id="popup_content"></div>
+                        </div>
                     </main>
                 </body>
             </html>
@@ -151,24 +165,95 @@
         <xsl:apply-templates mode="#current"/>
     </xsl:template>
     
-    
-    
-    
-    <xsl:template name="createNotes">
+    <xsl:template name="createAnnotations">
         <xsl:if test="descendant::note">
-            <section>
+            <section id="notes">
                 <h2>Notes</h2>
-                <xsl:apply-templates select="descendant::note" mode="appendix"/>
+                <xsl:apply-templates select="descendant::note[@type='editorial']" mode="appendix"/>
+            </section>
+        </xsl:if>
+        
+        <xsl:if test="descendant::term[@ref]">
+            <section id="glossary">
+                <h2>Glossary</h2>
+                <xsl:for-each select="distinct-values(descendant::term/@ref)">
+                    <xsl:variable name="termId" select="substring-after(.,'gls:')"/>
+                    <xsl:apply-templates select="document($path || 'glossary.xml')//item[@xml:id=$termId]" mode="appendix"/>
+                </xsl:for-each>
+            </section>
+        </xsl:if>
+        
+        <xsl:if test="descendant::placeName[@ref]">
+            <section id="places">
+                <h2>Places</h2>
+                <xsl:for-each select="distinct-values(descendant::placeName/@ref)">
+                    <xsl:variable name="placeId" select="substring-after(.,'plc:')"/>
+                    <xsl:apply-templates select="$places//place[@xml:id=$placeId]" mode="appendix"/>
+                </xsl:for-each>
             </section>
         </xsl:if>
     </xsl:template>
     
-    <xsl:template match="note" mode="appendix">
-
+    <xsl:template match="item[parent::list[@type='glossary']]" mode="appendix">
+        <div>
+            <xsl:call-template name="processAtts"/>
+            <xsl:apply-templates mode="#current"/>
+        </div>
+    </xsl:template>
+    
+    <xsl:template match="list[@type='glossary']/item/label" mode="appendix">
+        <h3>
+            <xsl:call-template name="processAtts"/>
+            <xsl:apply-templates mode="#current"/>
+        </h3>
+    </xsl:template>
+    
+    <xsl:template match="list[@type='glossary']/item/gloss[@source]" mode="appendix">
+        <xsl:variable name="thisSource" select="substring-after(@source,'bibl:')"/>
+        <div>
+            <xsl:call-template name="processAtts"/>
+            <span class="abbr"><xsl:value-of select="$bibliography//bibl[@xml:id=$thisSource]/@n"/></span>
+            <div class="content">
+                <xsl:apply-templates mode="html"/>
+            </div>
+        </div>
+    </xsl:template>
+    
+    
+    <xsl:template match="place" mode="appendix">
+        <div>
+            <xsl:call-template name="processAtts"/>
+            <xsl:if test="location/geo">
+                <xsl:variable name="geo" select="location/geo/normalize-space(.)"/>
+                <xsl:attribute name="data-lat" select="normalize-space(tokenize($geo,',')[1])"/>
+                <xsl:attribute name="data-lon" select="normalize-space(tokenize($geo,',')[2])"/>
+            </xsl:if>
+            <xsl:apply-templates mode="#current"/>
+        </div>
+    </xsl:template>
+    
+    <xsl:template match="placeName" mode="appendix">
+        <h3>
+            <xsl:call-template name="processAtts"/>
+            <xsl:apply-templates mode="html"/>
+        </h3>
+    </xsl:template>
+    
+    <xsl:template match="place/location[geo]" mode="appendix">
+        <div class="map"></div>
+    </xsl:template>
+    
+    
+     
+ 
+    
+    <xsl:template match="note[@type='editorial']" mode="appendix">
         <div class="noteContainer">
             <span class="noteNum"></span>
             <div>
-                <xsl:call-template name="processAtts"/>
+                <xsl:call-template name="processAtts">
+                    <xsl:with-param name="id" select="'note_'||jt:getNoteNum(.)"/>
+                </xsl:call-template>
                 <xsl:apply-templates mode="#current"/>
             </div>
         </div>
@@ -188,11 +273,19 @@
         </div>
     </xsl:template>
     
+    
     <xsl:template match="term | placeName" mode="html">
         <span>
             <xsl:call-template name="processAtts"/>
             <xsl:apply-templates mode="#current"/>
         </span>
+    </xsl:template>
+    
+    <xsl:template match="term[@ref] | placeName[@ref]" mode="html">
+        <a href="#{substring-after(@ref,':')}">
+            <xsl:call-template name="processAtts"/>
+            <xsl:apply-templates mode="#current"/>
+        </a>
     </xsl:template>
    
    <xsl:template match="text()[following-sibling::node()[1][self::pc]]" mode="html">
@@ -203,10 +296,30 @@
         <xsl:value-of select="replace(.,'^\s+','')"/>
     </xsl:template>
    
-    <xsl:template match="note" mode="html">
-        <span class="noteMarker"><xsl:value-of select="jt:getNoteNum(.)"/></span>
+    <xsl:template match="note[@type='editorial']" mode="html">
+        <a class="noteMarker" href="#note_{jt:getNoteNum(.)}"><xsl:value-of select="jt:getNoteNum(.)"/></a>
     </xsl:template>
-
+    
+    <xsl:template match="note[@type='questionForMC']" mode="html">
+        <span>
+            <xsl:call-template name="processAtts"/>
+            <xsl:apply-templates mode="#current"/>
+        </span>
+    </xsl:template>
+    
+    <xsl:template match="seg" mode="html">
+        <span>
+            <xsl:call-template name="processAtts"/>
+            <xsl:apply-templates mode="#current"/>
+        </span>
+    </xsl:template>
+   
+   <xsl:template match="choice[sic and corr]" mode="html">
+       <span>
+           <xsl:call-template name="processAtts"/>
+           <xsl:apply-templates select="node()[not(self::sic)]" mode="#current"/>
+       </span>
+   </xsl:template>
     
     <xsl:template match="pc" mode="html">
         <span>
@@ -220,7 +333,7 @@
         </hr>
     </xsl:template>
     
-    <xsl:template match="said | q | soCalled | title[@level='a']" mode="snippet html">
+    <xsl:template match="said | q | soCalled | title[@level='a'] | quote" mode="snippet html">
         <span>
             <xsl:call-template name="processAtts"/>
             <xsl:value-of select="jt:getOQ(.)"/>
@@ -338,7 +451,11 @@
         <link rel="stylesheet" href="css/reset.css"/>
         <link rel="stylesheet" href="css/fonts.css"/>
         <link rel="stylesheet" href="css/hrn.css"/>
-        <script src="/js/hrn.js"/>
+        <xsl:if test="descendant::placeName[@ref]">
+            <link rel="stylesheet" href="css/leaflet.css"/>
+            <script src="js/leaflet.js"/>
+        </xsl:if>
+        <script src="js/hrn.js"/>
     </xsl:template>
     
     
@@ -346,7 +463,7 @@
     <xsl:function name="jt:getNoteNum" as="xs:integer">
         <xsl:param name="note" as="element(note)"/>
         <xsl:variable name="thisChapter" select="$note/ancestor::div[@type='chapter'][1]" as="element(div)"/>
-        <xsl:value-of select="count($note/preceding::note[ancestor::*[. is $thisChapter]]) + 1"/>
+        <xsl:value-of select="count($note/preceding::note[@type='editorial'][ancestor::*[. is $thisChapter]]) + 1"/>
     </xsl:function>
     
     <xsl:function name="jt:getOQ">

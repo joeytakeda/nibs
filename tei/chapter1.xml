@@ -7,7 +7,7 @@
 <lb/>intent upon making the evergrowing grade to			
 <lb/><placeName>Banff</placeName> on <soCalled>high</soCalled>.<note type="editorial">Make some note here "Some Motorists" etc.</note></p>
             
-            <p>This year <term>tramps</term> were common on the road,			
+            <p>This year <term ref="gls:tram1">tramps</term> were common on the road,			
 <lb/>war veterans, for the most part, <soCalled>legging it</soCalled>			
 <lb/>from <placeName>Calgary</placeName> to lumber or road camp, or			
 <lb/>making for the ranches in the foothills, after			
@@ -22,14 +22,14 @@
             <pb n="8"/>
             <fw type="pageHeading">His Royal Nibs</fw>
 <lb/>trudged in the heat, the dust and the dry			
-<lb/><term>alkali-laden</term> air. Sometimes they were taken			
+<lb/><term ref="gls:alka1">alkali-laden</term> air. Sometimes they were taken			
 <lb/>on at camp or ranch. More often they were			
 <lb/>shunted farther afield. One wondered where			
 <lb/>they would finally go, these <soCalled>boys</soCalled> from the			
-<lb/>old land, who had crossed to the <term>Dominion of			
-<lb/>Canada</term> with such high hopes in their breasts.</p>
-            <p>The <placeName>O Bar O</placeName> lies midway between <placeName>Calgary</placeName>			
-<lb/>and <placeName>Banff</placeName>, in the foothills of the ranching			
+<lb/>old land, who had crossed to the Dominion of			
+<lb/>Canada with such high hopes in their breasts.<note type="editorial">Note about The Dominion of Canada (i.e. pre 1967).</note></p>
+            <p>The <placeName ref="plc:obar1">O Bar O</placeName> lies midway between <placeName>Calgary</placeName>			
+<lb/>and <placeName ref="plc:banf1">Banff</placeName>, in the foothills of the ranching			
 <lb/>country. Its white and green buildings grace			
 <lb/>the top of a hill that commands a view of the			
 <lb/>country from all sides.</p>
@@ -115,7 +115,7 @@
             <p>From the direction of the corrals swept			
 <lb/>reinforcements, in the shape of <soCalled>Hootmon</soCalled>,			
 <lb/>a Scot so nicknamed by the outfit, because of			
-<lb/>his favourite explosive utterance,<note><!--Do I need a note here?--></note> and <persName>Sandy</persName>,			
+<lb/>his favourite explosive utterance,<note type="editorial"><!--Do I need a note here?--></note> and <persName>Sandy</persName>,			
 <lb/>son of the <placeName>O Bar O</placeName>, red-haired, freckled<pc force="weak">-</pc>			
 <lb/>faced and indelibly marked by the sun above,			
 <lb/>who rode his <term>Indian bronc</term> with the grace and			
@@ -206,7 +206,7 @@
             <p>The tramp, as they believed him to be, was			
 <lb/>now sitting up erectly, with that sublime,			
 <lb/>smooth air of cheerful condescension which			
-<lb/>Canadians so loathe in an Englishman.<note><!--Some note here re: The Dukes in Alberta etc--></note></p>
+<lb/>Canadians so loathe in an Englishman.<note type="editorial"><!--Some note here re: The Dukes in Alberta etc--></note></p>
             <fw type="pageNum">[14]</fw>
             <pb n="15"/>
             <fw type="pageHeading">His Royal Nibs</fw>

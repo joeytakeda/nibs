@@ -1,0 +1,45 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<TEI xml:id="places" xmlns="http://www.tei-c.org/ns/1.0">
+    <teiHeader>
+        <fileDesc>
+            <titleStmt>
+                <title>Places</title>
+                <respStmt>
+                    <resp>Editor</resp>
+                    <name>Joey Takeda</name>
+                </respStmt>
+            </titleStmt>
+            <publicationStmt>
+                <p>TBA</p>
+            </publicationStmt>
+            <sourceDesc><p>TBA</p></sourceDesc>
+        </fileDesc>
+        <encodingDesc>
+            <p>Encoding desc goes here...</p>
+        </encodingDesc>
+        <revisionDesc>
+            <change status="proofed" xml:id="proofed">Chapter proofed</change>
+            <change status="draft" xml:id="draft">Chapter in draft</change>
+        </revisionDesc>
+    </teiHeader>
+    <text>
+        <body>
+            <div>
+                <listPlace>
+                    <place xml:id="obar1" type="fictional">
+                        <placeName>O Bar O</placeName>
+                    </place>
+                    
+                    <place xml:id="banf1">
+                        <placeName>Banff</placeName>
+                        <location>
+                            <geo>51.1777781, -115.5682504</geo>
+                        </location>
+                        <note>A small town in Alberta near the Rocky Mountains. Historically, Banff was </note>
+                    </place>
+                    
+                </listPlace>
+            </div>
+        </body>
+    </text>
+</TEI>

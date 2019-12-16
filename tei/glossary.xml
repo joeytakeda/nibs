@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<TEI xml:id="glossary" xmlns="http://www.tei-c.org/ns/1.0">
+    <teiHeader>
+        <fileDesc>
+            <titleStmt>
+                <title>His Royal Nibs</title>
+                <respStmt>
+                    <resp>Author</resp>
+                    <name>Winnifred Reeve</name>
+                </respStmt>
+                <respStmt>
+                    <resp>Editor</resp>
+                    <name>Joey Takeda</name>
+                </respStmt>
+            </titleStmt>
+            <publicationStmt>
+                <p>TBA</p>
+            </publicationStmt>
+            <sourceDesc><p>TBA</p></sourceDesc>
+        </fileDesc>
+        <encodingDesc>
+            <p>Encoding desc goes here...</p>
+        </encodingDesc>
+        <revisionDesc>
+            <change status="proofed" xml:id="proofed">Chapter proofed</change>
+            <change status="draft" xml:id="draft">Chapter in draft</change>
+        </revisionDesc>
+    </teiHeader>
+    <text>
+        <body>
+            
+            <list type="glossary">
+                <item xml:id="tram1">
+                    <label>tramp</label>
+                    <gloss source="bibl:oedi1"><quote>one who travels from place to place on foot, in search of employment, or as a vagrant</quote> (tramp, n.1, 4a)</gloss>
+                </item>
+                
+            </list>
+        </body>
+    </text>
+</TEI>

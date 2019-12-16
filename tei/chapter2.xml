@@ -41,7 +41,7 @@
 <lb/>girl! Say, Hilda, he’s a scream. You'd			
 <lb/>oughter’ve been there. He came along the			
 <lb/>road all dolled up in city clothes, and—look!			
-<lb/>Oh, my God-frey! Look <choice><sic>u</sic><corr>a</corr></choice>t<note type="questionForMC">Is "ut" a typo or is it part of the dialect? This spelling of "ut" instead of "at" appears nowhere else in the text, but is in both the Burt and Watt.</note> him, Hilda!</said></p>
+<lb/>Oh, my God-frey! Look <seg type="question"><choice><sic>u</sic><corr>a</corr></choice>t<note type="questionForMC">Is "ut" a typo or is it part of the dialect? This spelling of "ut" instead of "at" appears nowhere else in the text, but is in both the Burt and Watt.</note></seg> him, Hilda!</said></p>
             <p>In an ecstasy of derision and delight, Sandy			
 <lb/>pointed.</p>
             <p>Hand shading his eyes, the stranger was			
@@ -106,7 +106,7 @@
             <fw type="pageHeading">His Royal Nibs</fw>
             <p>hand of O Bar O. There was in it, despite its			
 <lb/>mockery, a haughty accent of contempt.</p>
-            <p><said who="#Hilda" toWhom="#Bill">Who’s his royal nibs,<note type="questionForMC">Should I gloss this now or in the title? Or both?</note> Bully Bill?</said></p>
+            <p><said who="#Hilda" toWhom="#Bill">Who’s <seg type="question">his royal nibs,<note type="questionForMC">Should I gloss this now or in the title? Or both?</note></seg> Bully Bill?</said></p>
             <p>Through the corner of his mouth, the fore<pc force="weak">-</pc>			
 <lb/>man enlightened her:</p>
             <p><said who="#Bill" toWhom="#Hilda">Vodeyveel show.<note type="editorial">I.e. Vaudeville Show.</note> Things gittin’ kind o’			
@@ -115,12 +115,12 @@
 <lb/>ing tickles them more than turnin’ a <term>green</term> <term>ten<pc force="weak">-</pc>			
 <lb/>derfoot</term> Englishman on to them. This one			
 <lb/>here is a circus. When I asked him what the			
-<lb/>hello—excuse me, Miss Hilda!—<note type="questionForMC">Is it worth tagging explitives/swearing/etc? (Godfrey, What the hello, et cetera?).</note>what the			
-<lb/>hello he was doin’ round here, he ses:			
+<lb/>hello—excuse me, Miss Hilda!—<seg type="question">what the			
+<lb/>hello he<note type="questionForMC">Is it worth tagging explitives/swearing/etc? (Godfrey, What the hello, et cetera?).</note></seg> was doin’ round here, he ses:			
 <lb/><q>Cheerio!</q> Say, if ever there was <q>Kid me</q>			
 <lb/>writ all over a human bein’, it’s splashed over			
 <lb/>that there one</said>.</p>
-            <p><said who="#Hilda">Um!</said><note type="questionForMC">Is this Hilda speaking here?</note></p>
+            <p><seg type="question"><said who="#Hilda">Um!</said><note type="questionForMC">Is this Hilda speaking here?</note></seg></p>
             <p>Hilda came down the steps and approached
 <lb/>the newcomer. Head slightly on one side, she			
 <lb/>examined him with evident curiosity and			
@@ -135,7 +135,7 @@
 <lb/>cheek of the girl, though her critical eyes were			
 <lb/>still cold as she looked the man over from head
 <lb/>to foot.</p>
-            <p><said who="#Hilda" toWhom="#Cheerio"><term>Hi-yi!</term><note type="questionForMC">How best to gloss this term? For instance, there's stuff like <ref target="https://www.loc.gov/resource/ihas.100005511.0">this</ref> that looks </note> You! Where do you hail from?</said></p>
+            <p><said who="#Hilda" toWhom="#Cheerio"><seg type="question"><term>Hi-yi!</term><note type="questionForMC">How best to gloss this term? For instance, there's stuff like <ref target="https://www.loc.gov/resource/ihas.100005511.0">this</ref> that looks </note></seg> You! Where do you hail from?</said></p>
             <p>As he looked up at the beautiful, <term>saucy</term>			
 <lb/>young creature before him, the Englishman			
 <lb/>was seized with one of his worst spells of stut<pc force="weak">-</pc>			

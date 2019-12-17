@@ -10,6 +10,7 @@ before_script:
     - mv site/* HisRoyalNibs
 script:
     - aws s3 sync HisRoyalNibs s3://joeytakeda/HisRoyalNibs --acl public-read --delete
+    - aws cloudfront create-invalidation --distribution-id EOIED742DZBCD --paths '/*'
 notifications:
   email:
     recipients:

@@ -4,8 +4,8 @@ jdk:
   - oraclejdk8
 language: python
 before_script:
-    - pip install --user pyOpenSSL ndg-httpsclient pyasn1
-    - pip install --user awscli
+    - pip install pyOpenSSL ndg-httpsclient pyasn1
+    - pip install awscli
     - ant -f build.xml
     - mkdir HisRoyalNibs
     - mv site/* HisRoyalNibs

@@ -3,7 +3,6 @@ dist: trusty
 jdk:
   - oraclejdk8
 before_script:
-    - pip install pyOpenSSL ndg-httpsclient pyasn1
     - pip install --user awscli
     - ant -f build.xml
     - mkdir HisRoyalNibs

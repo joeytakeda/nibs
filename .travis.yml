@@ -3,13 +3,14 @@ dist: trusty
 jdk:
   - oraclejdk8
 before_script:
+    - pip install --user pyOpenSSL ndg-httpsclient pyasn1
     - pip install --user awscli
     - ant -f build.xml
     - mkdir HisRoyalNibs
     - mv site/* HisRoyalNibs
 script:
     - aws s3 sync HisRoyalNibs s3://joeytakeda/HisRoyalNibs --acl public-read --delete
-    - aws cloudfront create-invalidation --distribution-id EOIED742DZBCD --paths '/*'
+    - aws cloudfront create-invalidation --distribution-id $DISTRIBUTION_ID --paths '/*'
 notifications:
   email:
     recipients:

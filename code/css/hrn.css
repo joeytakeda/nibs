@@ -210,6 +210,10 @@ li li{
 }
 
 
+/* Hide the stutter tokens, which are only necessary for indexing */
+.stutterToken{
+    display:none;
+}
 /* Don't show these for now */
 br, [data-el='fw'], hr, [data-el='pc']{
     display:none;

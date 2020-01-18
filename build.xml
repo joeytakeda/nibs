@@ -4,14 +4,8 @@
   <!--A fairly simple build for the site-->
     <target name="clean">
         <delete dir="site"/>
+        <delete dir="staticSearch"/>
         <mkdir dir="site"/>
-    </target>
-    
-    <target name="createEdition">
-        <java classpath="lib/saxon9he.jar" classname="net.sf.saxon.Transform" failonerror="true" >
-            <arg value="-xsl:${basedir}/code/site/html.xsl"/>
-            <arg value="-s:${basedir}/tei/HisRoyalNibs.xml"/>
-        </java>
     </target>
     
     <target name="copySiteFiles">
@@ -25,6 +19,28 @@
         </copy>
     </target>
     
-    <target name="all" depends="clean, createEdition, copySiteFiles"/>
+    
+    <target name="createEdition">
+        <java classpath="lib/saxon9he.jar" classname="net.sf.saxon.Transform" failonerror="true" >
+            <arg value="-xsl:${basedir}/code/site/html.xsl"/>
+            <arg value="-s:${basedir}/tei/HisRoyalNibs.xml"/>
+        </java>
+    </target>
+    
+
+    <target name="buildSearch">
+        <get src="https://github.com/projectEndings/staticSearch/releases/download/v0.7/staticSearch-0.7.zip" dest="staticSearch.zip"/>
+        <unzip src="staticSearch.zip" dest="staticSearch"/>
+        <delete file="staticSearch.zip"/>
+        <copy file="code/site/search.html" tofile="site/search.html"/>
+        <ant antfile="staticSearch/build.xml" target="all" usenativebasedir="true">
+            <property name="headless" value="true"/>
+            <property name="config" value="../ssConfig.xml"/>
+        </ant>
+    </target>
+    
+    
+    
+    <target name="all" depends="clean, copySiteFiles, createEdition,  buildSearch"/>
     
 </project>

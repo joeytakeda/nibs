@@ -332,6 +332,19 @@
             <xsl:apply-templates mode="#current"/>
         </span>
     </xsl:template>
+    
+    <xsl:template match="seg[@type='stutter']" mode="html">
+        <xsl:variable name="stutterBit" select="text()" as="xs:string"/>
+        <xsl:variable name="stutterTokens" select="tokenize($stutterBit,'\s*-\s*')" as="xs:string+"/>
+        <xsl:variable name="probableBeginning" select="$stutterTokens[1]" as="xs:string"/>
+        <span>
+            <xsl:call-template name="processAtts"/>
+            <xsl:apply-templates mode="#current"/>
+        </span>
+        <span class="stutterToken">
+            <xsl:value-of select="$probableBeginning"/>
+        </span>
+    </xsl:template>
    
    <xsl:template match="choice[sic and corr]" mode="html">
        <span>

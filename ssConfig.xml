@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<config xmlns="http://hcmc.uvic.ca/ns/staticSearch">
+    <params>
+        <searchFile>site/search.html</searchFile>
+        <recurse>true</recurse>
+        <phrasalSearch>true</phrasalSearch>
+        <createContexts>true</createContexts>
+        <maxKwicsToHarvest>3</maxKwicsToHarvest>
+        <maxKwicsToShow>3</maxKwicsToShow>
+        <totalKwicLength>15</totalKwicLength>
+        <kwicTruncateString>...</kwicTruncateString>
+        <verbose>false</verbose>
+        <stopwordsFile>staticSearch/xsl/english_stopwords.txt</stopwordsFile>
+        <dictionaryFile>staticSearch/xsl/english_words.txt</dictionaryFile>
+        <indentJSON>true</indentJSON>
+    </params>
+    
+    <rules>
+        <rule weight="0" xpath="div[@id='toc']"/>
+        <rule weight="0" xpath="h2"/>
+        <rule weight="0"
+            xpath="script | style"/>
+    </rules>
+</config>

@@ -68,6 +68,14 @@
                      <ptr target="https://www.dchp.ca/dchp2/Entries/view/Indian" n="DHCP2"/>
                  </linkGrp>   
                 </item>
+                <item xml:id="lari1">
+                    <label>lariat</label>
+                    <gloss>I.e. a lasso.</gloss>
+                </item>
+                <item xml:id="dime1">
+                    <label>dime novel</label>
+                    <gloss>A small, inexpensive paperback novel. Broadly, the term refers to books that contains little to no <q>literary merit</q>.</gloss>
+                </item>
             </list>
         </body>
     </text>

@@ -159,7 +159,7 @@
     
     <!--Snippet mode-->
     
-    <xsl:template match="note | fw | pb | br | pc" mode="snippet"/>
+    <xsl:template match="note | pb" mode="snippet"/>
     
     <xsl:template match="term | placeName | p" mode="snippet">
         <xsl:apply-templates mode="#current"/>
@@ -285,7 +285,7 @@
         </h2>
     </xsl:template>
     
-    <xsl:template match="p | fw" mode="html">
+    <xsl:template match="p" mode="html">
         <div>
             <xsl:call-template name="processAtts"/>
             <xsl:apply-templates mode="#current"/>
@@ -353,11 +353,6 @@
        </span>
    </xsl:template>
     
-    <xsl:template match="pc" mode="html">
-        <span>
-            <xsl:call-template name="processAtts"/>
-        </span>
-    </xsl:template>
     
     <xsl:template match="pb" mode="html">
         <hr>

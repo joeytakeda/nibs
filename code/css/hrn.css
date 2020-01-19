@@ -220,6 +220,13 @@ br, [data-el='fw'], hr, [data-el='pc']{
 }
 
 /* ********************* EDITORIAL NOTES AND QUESTION NOTES */
+
+/* Everything in the appendix can be hidden now */
+
+#appendix{
+    display:none;
+}
+
 .noteMarker{
     font-size: 0.9rem;
     vertical-align: super;
